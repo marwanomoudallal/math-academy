@@ -1,0 +1,6 @@
+@keyframes float{50%{transform:translateY(-9px)}}@keyframes twinkle{50%{opacity:.15;transform:scale(.6)}}@keyframes pop{0%{transform:scale(.7);opacity:0}70%{transform:scale(1.06)}100%{transform:scale(1);opacity:1}}@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}@keyframes attack{50%{transform:translateX(45px) rotate(8deg)}}@keyframes enemyMove{to{left:80px}}@keyframes confetti{to{transform:translateY(110vh) rotate(720deg)}}.sky i{animation:twinkle 3s infinite}.sky i:nth-child(2){animation-delay:1s}.avatar,.zone span,.fighter .sprite{animation:float 3s ease-in-out infinite}.pop{animation:pop .35s}.shake{animation:shake .28s}.attack{animation:attack .45s}.confetti{position:fixed;top:-20px;width:10px;height:18px;z-index:200;animation:confetti 2.5s linear forwards}
+body.no-animations *,body.no-animations *:before,body.no-animations *:after{animation:none!important;transition:none!important}
+@keyframes patternTap{50%{transform:scale(.88);filter:brightness(1.7);box-shadow:0 0 24px currentColor}100%{transform:scale(1);filter:brightness(1)}}
+.pattern-tile.pattern-tap{animation:patternTap .24s ease-out}
+.your-turn-message{color:#ffd34e;font-size:20px;font-weight:900;text-shadow:0 0 15px #ffd34e66}
+.wrong-answer-feedback{color:#ff9aaa;padding:10px;border-radius:12px;background:#ff647c18}

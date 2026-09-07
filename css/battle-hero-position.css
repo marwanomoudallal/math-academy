@@ -1,0 +1,5 @@
+.player-fighter{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-width:190px}
+.player-fighter>.sprite{position:relative;display:block;width:190px;height:205px;min-height:205px;margin-bottom:12px;overflow:visible;font-size:0}
+.player-fighter>.sprite .cartoon-boy.battle{position:absolute;z-index:8;left:-10px;bottom:82px;margin:0;transform:scale(.34);transform-origin:50% 100%}
+.player-fighter>b{position:relative;z-index:20;display:block;min-width:150px;margin-top:0;padding:6px 10px;border-radius:10px;background:#24344df2;color:#fff;text-align:center;line-height:1.2;white-space:nowrap;box-shadow:0 4px 8px #0004}
+@media(max-width:600px){.player-fighter{min-width:135px}.player-fighter>.sprite{width:145px;height:190px;min-height:190px;margin-bottom:10px}.player-fighter>.sprite .cartoon-boy.battle{left:-32px;bottom:68px;transform:scale(.28)}.player-fighter>b{min-width:120px;font-size:12px}}

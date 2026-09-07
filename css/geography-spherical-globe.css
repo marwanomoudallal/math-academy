@@ -1,0 +1,8 @@
+/* Keep the planet spherical while its surface moves during rotation. */
+.earth{transform:rotateX(-5deg)!important;border-radius:50%;isolation:isolate;box-shadow:inset 38px 20px 48px #c9f5ff66,inset -75px -18px 85px #001538e8,inset -15px 0 20px #001f4c88,0 0 0 9px #5be1ff38,0 0 60px #27b9ed99!important}
+.earth:before{content:"";position:absolute;z-index:9;inset:0;border-radius:50%;pointer-events:none;background:radial-gradient(circle at 29% 22%,#fff9 0 3%,#ffffff36 13%,transparent 31%),linear-gradient(90deg,#001c4726 0,transparent 28% 64%,#001127b8 100%);mix-blend-mode:screen}
+.earth:after{content:"";position:absolute;z-index:10;inset:0;border-radius:50%;pointer-events:none;box-shadow:inset 18px 0 20px #8ceaff38,inset -52px 0 62px #000a}
+.continent-layer{transform:translateX(clamp(-65px,var(--globe-shift),65px)) translateZ(8px);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.earth .clouds{background-position:var(--globe-shift) 0;transition:background-position .45s}.earth .night-lights{background-position:var(--globe-shift) 0;transition:background-position .45s}
+.earth-wrap{transform-style:preserve-3d}.earth-shadow{bottom:-30px;height:65px;background:#000b;filter:blur(18px)}
+.country-pin{transform:translateZ(24px)}

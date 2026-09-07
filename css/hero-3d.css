@@ -1,0 +1,23 @@
+/* Layered 3D character: depth, volume, highlights, and rotation parallax. */
+.hero-model,.cartoon-boy,.cartoon-boy.boy,.cartoon-boy.girl,.cb-head{transform-style:preserve-3d}
+.cartoon-boy{filter:drop-shadow(0 14px 9px #1b2a3940);backface-visibility:visible}
+.cb-head{translate:0 0 22px;background:radial-gradient(circle at 34% 25%,#fff8 0 5%,transparent 22%),linear-gradient(100deg,color-mix(in srgb,var(--skin),#000 12%),var(--skin) 34% 68%,color-mix(in srgb,var(--skin),#000 18%));box-shadow:inset 7px 0 10px #fff4,inset -9px -3px 12px #6b392526,5px 8px 10px #2632382e}
+.cb-head .ear.left{translate:0 0 -5px;box-shadow:inset 5px 0 6px #fff4,-3px 4px 6px #0002}.cb-head .ear.right{translate:0 0 -5px;box-shadow:inset -5px 0 6px #0001,3px 4px 6px #0002}
+.cb-head .eye{translate:0 0 5px;box-shadow:inset 0 2px 2px #fff7,0 1px 2px #0005}.cb-head .nose{translate:0 0 8px;box-shadow:1px 2px 2px #0002}.cb-head .smile{translate:0 0 6px;filter:drop-shadow(0 2px 1px #0002)}
+.cb-hair{translate:0 0 18px;filter:drop-shadow(3px 6px 4px #0004)}.cb-hair:after{translate:0 0 3px}
+.cartoon-boy.girl .cb-head:before{translate:0 0 -7px;background:linear-gradient(100deg,#3b2117,#754a31 42% 70%,#2b1811);box-shadow:inset 9px 0 10px #fff2,inset -10px 0 12px #0004,5px 8px 8px #0003;filter:drop-shadow(3px 6px 4px #0003)}
+.cartoon-boy.girl .cb-torso{box-shadow:inset 9px 0 12px #fff3,inset -11px 0 13px #0002,5px 8px 9px #17243a38}.cartoon-boy.boy .cb-torso{box-shadow:inset 9px 0 12px #fff3,inset -11px 0 13px #0002,5px 8px 9px #17243a38}
+.cb-mask,.cb-glasses,.cb-headwear{translate:0 0 31px;filter:drop-shadow(2px 4px 3px #0005)}
+.cb-neck{translate:0 0 6px;background:linear-gradient(90deg,color-mix(in srgb,var(--skin),#000 15%),var(--skin) 45% 72%,color-mix(in srgb,var(--skin),#fff 15%));box-shadow:3px 3px 5px #0002}
+.cb-torso{translate:0 0 12px;box-shadow:inset 9px 0 12px #fff3,inset -11px 0 13px #0002,5px 8px 9px #17243a38;filter:saturate(1.06)}
+.cb-torso:before{translate:0 0 2px}.cb-torso:after{translate:-50% 0 8px}.cb-torso>span{translate:0 0 8px}
+.cb-arm{background:linear-gradient(90deg,color-mix(in srgb,var(--skin),#000 14%),var(--skin) 40% 70%,color-mix(in srgb,var(--skin),#fff 18%));box-shadow:inset 5px 0 7px #fff3,inset -6px 0 7px #0002,3px 7px 7px #0002}
+.cb-arm.left{translate:0 0 8px}.cb-arm.right{translate:0 0 16px}.cb-arm b{translate:0 0 5px;box-shadow:inset 5px 3px 6px #fff4,inset -5px -4px 7px #0003,2px 4px 5px #0003}
+.cb-necklace,.cb-belt{translate:0 0 22px;filter:drop-shadow(1px 3px 2px #0005)}
+.cb-shorts{translate:0 0 10px;box-shadow:inset 10px 0 11px #fff2,inset -12px 0 13px #0003,4px 7px 8px #0002}
+.cb-leg{background:linear-gradient(90deg,color-mix(in srgb,var(--skin),#000 13%),var(--skin) 38% 72%,color-mix(in srgb,var(--skin),#fff 16%));box-shadow:inset 5px 0 6px #fff3,inset -6px 0 7px #0002}.cb-leg.left{translate:0 0 3px}.cb-leg.right{translate:0 0 9px}
+.cb-foot{background:linear-gradient(100deg,color-mix(in srgb,var(--shoe),#000 18%),var(--shoe) 40% 72%,color-mix(in srgb,var(--shoe),#fff 20%));box-shadow:inset 5px 3px 5px #fff4,inset -6px -4px 7px #0003,3px 7px 7px #0003}.cb-foot.left{translate:0 0 7px}.cb-foot.right{translate:0 0 13px}
+.cb-cape{translate:0 0 -22px;filter:drop-shadow(5px 8px 5px #0004)}.cb-wings{translate:0 0 -30px;filter:drop-shadow(5px 8px 6px #0004)}.cb-backpack{translate:0 0 -14px}.cb-aura{translate:0 0 -42px}.cb-tool{translate:0 0 28px;filter:drop-shadow(4px 7px 4px #0005)}
+.hero-model{will-change:transform}.hero-model:after{content:"";position:absolute;z-index:-1;left:48px;bottom:12px;width:120px;height:25px;border-radius:50%;background:#0004;filter:blur(9px);transform:translateZ(-55px) rotateX(78deg)}
+@supports not (background:color-mix(in srgb,#fff,#000)){.cb-head,.cb-neck,.cb-arm,.cb-leg{background:var(--skin)}.cb-foot{background:var(--shoe)}}
+@media(prefers-reduced-motion:reduce){.hero-model{will-change:auto}}

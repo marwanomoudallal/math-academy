@@ -1,0 +1,13 @@
+/* Arabic keyboards vary across devices, so Typing Defense is unavailable in Arabic mode. */
+html[lang="ar"] [data-page="typing"] {
+  display: none !important;
+}
+
+/* Mathematical notation must retain its standard left-to-right order. */
+html[lang="ar"] .question,
+html[lang="ar"] .code-block,
+html[lang="ar"] #math-answer {
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: center;
+}

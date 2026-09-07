@@ -1,0 +1,5 @@
+.cartoon-boy.girl .cb-head:before{content:"";position:absolute;z-index:-1;left:-12px;top:-18px;width:124px;height:132px;border-radius:48% 48% 38% 38%;background:#6b432d;clip-path:polygon(0 0,100% 0,100% 100%,78% 78%,75% 24%,25% 24%,22% 78%,0 100%)}
+.cartoon-boy.girl .cb-head .ear{display:none}
+.cartoon-boy.girl .cb-torso{border-radius:12px 12px 4px 4px;clip-path:polygon(17% 0,83% 0,94% 58%,100% 100%,0 100%,6% 58%)}
+.cartoon-boy.girl .cb-shorts{height:82px;clip-path:polygon(0 0,100% 0,92% 100%,8% 100%);border-radius:0 0 8px 8px}
+.cartoon-boy.girl .cb-hair:not(:empty)+.cb-mask{z-index:9}

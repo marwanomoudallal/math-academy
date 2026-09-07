@@ -1,0 +1,100 @@
+/* Code-drawn outfit artwork shared by the hero and wardrobe cards. */
+.cartoon-boy .cb-torso{overflow:hidden;background:var(--cloth,linear-gradient(var(--top),var(--top)))}
+.cartoon-boy .cb-torso:before,.cartoon-boy .cb-torso:after{content:"";position:absolute;pointer-events:none}
+.cartoon-boy .cb-torso:before{inset:0;background:var(--pattern,none)}
+.cartoon-boy .cb-torso:after{left:50%;top:5px;width:24px;height:24px;translate:-50% 0;border:var(--badge-border,0);border-radius:var(--badge-radius,0);background:var(--badge,transparent);box-shadow:var(--detail-shadow,none)}
+.outfit-sky-t-shirt{--cloth:linear-gradient(135deg,#64b5f6,#2196f3);--pattern:linear-gradient(90deg,transparent 46%,#fff5 47% 53%,transparent 54%)}
+.outfit-forest-hoodie{--cloth:linear-gradient(#2e7d32,#43a047);--pattern:radial-gradient(ellipse at 50% 2%,#173d1a 0 21%,transparent 22%),linear-gradient(90deg,transparent 48%,#d7ccc8 49% 51%,transparent 52%)}
+.outfit-galaxy-jacket{--cloth:radial-gradient(circle at 25% 25%,#fff 0 1px,transparent 2px),radial-gradient(circle at 70% 60%,#80d8ff 0 2px,transparent 3px),linear-gradient(135deg,#311b92,#7b1fa2);--pattern:linear-gradient(90deg,transparent 48%,#ffd54f 49% 51%,transparent 52%)}
+.outfit-hero-suit{--cloth:linear-gradient(90deg,#b71c1c 0 28%,#1976d2 29% 71%,#b71c1c 72%);--badge:#ffd54f;--badge-radius:50%;--detail-shadow:0 0 0 3px #fff}
+.outfit-ninja-suit{--cloth:linear-gradient(135deg,#111,#37474f);--pattern:linear-gradient(45deg,transparent 43%,#78909c 44% 48%,transparent 49% 55%,#78909c 56% 60%,transparent 61%)}
+.outfit-knight-armor{--cloth:linear-gradient(90deg,#78909c,#eceff1 48%,#607d8b);--pattern:repeating-linear-gradient(0deg,transparent 0 25px,#455a64 26px 29px);--badge:#455a64;--badge-radius:50%;--badge-border:3px solid #cfd8dc}
+.outfit-explorer-shirt{--cloth:linear-gradient(90deg,#ef6c00,#ff9800);--pattern:linear-gradient(90deg,transparent 12%,#5d4037 13% 20%,transparent 21% 79%,#5d4037 80% 87%,transparent 88%);--badge:#fdd835;--badge-radius:4px}
+.outfit-space-suit{--cloth:linear-gradient(90deg,#cfd8dc,#fff,#b0bec5);--pattern:linear-gradient(0deg,transparent 68%,#455a64 69% 74%,transparent 75%);--badge:#29b6f6;--badge-radius:5px;--badge-border:2px solid #263238}
+.outfit-dragon-armor{--cloth:linear-gradient(135deg,#1b5e20,#43a047);--pattern:radial-gradient(circle at 20% 35%,transparent 0 7px,#81c784 8px 10px,transparent 11px),radial-gradient(circle at 75% 65%,transparent 0 8px,#81c784 9px 11px,transparent 12px);--badge:#ffb300;--badge-radius:50% 10%}
+.outfit-wizard-robe{--cloth:linear-gradient(#4527a0,#7e57c2);--pattern:radial-gradient(circle at 20% 30%,#fff59d 0 2px,transparent 3px),radial-gradient(circle at 75% 65%,#fff 0 2px,transparent 3px);--badge:#ffd54f;--badge-radius:50%}
+.outfit-academy-uniform{--cloth:linear-gradient(90deg,#283593,#3949ab);--pattern:linear-gradient(135deg,transparent 38%,#fff 39% 48%,#e53935 49% 54%,#fff 55% 64%,transparent 65%);--badge:#ffc107;--badge-radius:3px}
+.outfit-sports-star{--cloth:linear-gradient(90deg,#ec407a 0 18%,#fff 19% 25%,#ec407a 26% 74%,#fff 75% 81%,#ec407a 82%);--badge:#fff;--badge-radius:50%;--detail-shadow:0 0 0 3px #ad1457}
+.outfit-super-girl-suit{--cloth:linear-gradient(90deg,#1565c0 0 22%,#d81b60 23% 77%,#1565c0 78%);--badge:#ffd54f;--badge-radius:50% 50% 10% 10%;--detail-shadow:0 0 0 3px #fff}
+.outfit-moon-knight-armor{--cloth:linear-gradient(90deg,#5c6bc0,#c5cae9 50%,#5c6bc0);--pattern:repeating-linear-gradient(135deg,transparent 0 15px,#ffffff35 16px 19px);--badge:#fff59d;--badge-radius:50% 0 50% 50%}
+.outfit-forest-ranger{--cloth:linear-gradient(90deg,#2e7d32,#66bb6a);--pattern:linear-gradient(45deg,transparent 43%,#795548 44% 52%,transparent 53%);--badge:#cddc39;--badge-radius:80% 10%}
+.outfit-crystal-princess{--cloth:linear-gradient(135deg,#7e57c2,#ce93d8);--pattern:linear-gradient(90deg,transparent 35%,#fff5 36% 40%,transparent 41% 59%,#fff5 60% 64%,transparent 65%);--badge:#80deea;--badge-radius:50% 50% 10% 50%;--detail-shadow:0 0 8px #fff}
+.outfit-galaxy-explorer{--cloth:radial-gradient(circle at 20% 30%,#fff 0 1px,transparent 2px),radial-gradient(circle at 70% 55%,#ff80ab 0 2px,transparent 3px),linear-gradient(135deg,#1a237e,#5c6bc0);--badge:#26c6da;--badge-radius:50%;--badge-border:2px solid #fff}
+.outfit-dragon-rider{--cloth:linear-gradient(135deg,#00695c,#26a69a);--pattern:repeating-linear-gradient(45deg,transparent 0 13px,#80cbc455 14px 18px);--badge:#ffca28;--badge-radius:50% 10%}
+.outfit-magic-academy{--cloth:linear-gradient(90deg,#6a1b9a,#ab47bc);--pattern:linear-gradient(135deg,transparent 39%,#ffd54f 40% 44%,transparent 45% 55%,#ffd54f 56% 60%,transparent 61%);--badge:#fff59d;--badge-radius:50%}
+.outfit-phoenix-guardian{--cloth:linear-gradient(135deg,#bf360c,#ff7043 55%,#ffca28);--pattern:radial-gradient(ellipse at 50% 100%,#ffd54f 0 15%,transparent 16%);--badge:#fff176;--badge-radius:50% 10% 50% 10%;--detail-shadow:0 0 8px #ffeb3b}
+.book-item .outfit-art{display:inline-block;width:58px;height:67px;border-radius:10px 10px 16px 16px;background:var(--cloth,linear-gradient(135deg,#607d8b,#90a4ae));box-shadow:inset 0 0 0 3px #ffffff55,0 5px 9px #0002;clip-path:polygon(14% 0,34% 8%,66% 8%,86% 0,100% 22%,86% 35%,82% 100%,18% 100%,14% 35%,0 22%)}
+.book-item .outfit-art:after{content:"";display:block;width:15px;height:15px;margin:13px auto;border-radius:var(--badge-radius,50%);background:var(--badge,#ffffff66);box-shadow:var(--detail-shadow,none)}
+
+/* More dimensional fabric, tailoring, and footwear. */
+.cartoon-boy .cb-torso{
+  border:1px solid #0002;
+  box-shadow:inset 10px 0 13px #fff2,inset -12px 0 15px #0003,inset 0 -9px 8px #0002,0 5px 7px #0003;
+}
+.cartoon-boy .cb-torso:before{
+  box-shadow:inset 0 3px 0 #fff3,inset 0 -2px 0 #0003;
+}
+.cartoon-boy .cb-shorts{
+  border-top:2px solid #ffffff38;
+  box-shadow:inset 11px 0 12px #fff2,inset -12px 0 13px #0003,inset 0 -7px 8px #0002,0 4px 5px #0002;
+}
+.cartoon-boy .cb-shorts:before,.cartoon-boy .cb-shorts:after{
+  content:"";position:absolute;top:7px;bottom:8px;width:1px;background:#ffffff50;box-shadow:1px 0 #0003;
+}
+.cartoon-boy .cb-shorts:before{left:22px}.cartoon-boy .cb-shorts:after{right:22px}
+.cartoon-boy .cb-foot{
+  overflow:hidden;border:1px solid #0003;
+  box-shadow:inset 5px 5px 7px #fff3,inset -7px -4px 7px #0003,0 4px 4px #0003;
+}
+.cartoon-boy .cb-foot:before{
+  content:"";position:absolute;left:12px;top:4px;width:20px;height:7px;border-top:2px solid #ffffffaa;border-bottom:2px solid #ffffff88;transform:skewX(-18deg);
+}
+.cartoon-boy .cb-foot:after{
+  content:"";position:absolute;left:-2px;right:-2px;bottom:-1px;height:5px;background:#f1f1f1;border-top:1px solid #0004;box-shadow:inset 0 -2px #9e9e9e;
+}
+.cartoon-boy:not(.belt-none) .cb-belt{
+  box-shadow:inset 0 2px 2px #fff4,inset 0 -2px 2px #0005,0 2px 3px #0004;
+}
+.cartoon-boy:not(.belt-none) .cb-belt i{
+  background:linear-gradient(135deg,#fff09a,#ffc107 48%,#b87900 52%,#ffe57f);
+  box-shadow:inset 0 0 0 1px #fff7,0 1px 2px #0005;
+}
+
+/* Garment-specific construction details. */
+.cartoon-boy.outfit-sky-t-shirt .cb-torso{border-radius:8px 8px 3px 3px}
+.cartoon-boy.outfit-forest-hoodie .cb-torso{filter:drop-shadow(0 3px 2px #0003)}
+.cartoon-boy.outfit-galaxy-jacket .cb-torso,.cartoon-boy.outfit-explorer-shirt .cb-torso{border-left:2px solid #ffffff33;border-right:2px solid #0003}
+.cartoon-boy.outfit-knight-armor .cb-torso,.cartoon-boy.outfit-moon-knight-armor .cb-torso{border:2px solid #455a64;box-shadow:inset 12px 0 12px #fff7,inset -12px 0 12px #26323888,0 6px 8px #0004}
+.cartoon-boy.outfit-space-suit .cb-torso{border:3px solid #78909c;box-shadow:inset 9px 0 13px #fff,inset -10px 0 13px #607d8b88,0 5px 8px #0004}
+.cartoon-boy.outfit-ninja-suit .cb-torso{border-color:#78909c66;box-shadow:inset 8px 0 12px #ffffff18,inset -10px 0 13px #0008,0 5px 7px #0005}
+
+.cartoon-boy.pants-blue-jeans .cb-shorts{background:linear-gradient(90deg,#0d47a1,#2875c7 43%,#0b3d91 51%,#1e63b4);border-top-color:#82b1ff}
+.cartoon-boy.pants-blue-jeans .cb-shorts:before,.cartoon-boy.pants-blue-jeans .cb-shorts:after{background:#f5cf88aa}
+.cartoon-boy.pants-explorer-pants .cb-shorts{background:linear-gradient(90deg,#4e342e,#795548 46%,#3e2723 52%,#6d4c41)}
+.cartoon-boy.pants-ninja-pants .cb-shorts{background:linear-gradient(90deg,#080808,#30343a 45%,#101214 52%,#25282d)}
+.cartoon-boy.pants-space-pants .cb-shorts{background:linear-gradient(90deg,#b0bec5,#fafafa 44%,#90a4ae 52%,#eceff1);border-top:3px solid #607d8b}
+.cartoon-boy.pants-knight-pants .cb-shorts{background:repeating-linear-gradient(90deg,#546e7a 0 14px,#90a4ae 15px 28px);border-top:3px solid #37474f}
+.cartoon-boy.pants-sport-shorts .cb-shorts{background:linear-gradient(90deg,#b71c1c,#ef5350 45%,#a81414 52%,#e53935);border-left:3px solid #fff;border-right:3px solid #fff}
+
+.cartoon-boy.shoes-golden-shoes .cb-foot,.cartoon-boy.shoes-star-boots .cb-foot{background:linear-gradient(135deg,#fff59d,#f9a825 55%,#8d5c00)}
+.cartoon-boy.shoes-knight-boots .cb-foot{background:linear-gradient(135deg,#a1887f,#5d4037 60%,#2d1b16)}
+.cartoon-boy.shoes-snow-boots .cb-foot{background:linear-gradient(135deg,#e3f2fd,#90caf9 58%,#4f83a8)}
+.cartoon-boy.shoes-shadow-shoes .cb-foot{background:linear-gradient(135deg,#546e7a,#101820 65%)}
+.cartoon-boy.shoes-rocket-shoes .cb-foot{background:linear-gradient(135deg,#ffcc80,#ef6c00 55%,#8c2f00)}
+
+.book-item .outfit-art{position:relative;border:1px solid #0003;box-shadow:inset 8px 5px 10px #fff3,inset -9px -7px 11px #0003,0 6px 10px #0003}
+.book-item .outfit-art:before{content:"";position:absolute;left:50%;top:4px;width:18px;height:9px;translate:-50% 0;border:2px solid #ffffff99;border-top:0;border-radius:0 0 12px 12px;box-shadow:0 1px #0004}
+/* Illustrated accessories replace character emoji overlays. */
+.cartoon-boy:not(.hair-none) .cb-hair{left:-5px;top:-16px;width:110px;height:50px;border-radius:55% 55% 25% 25%;background:var(--hair,#4e2e1e);box-shadow:inset 0 -9px #0002}
+.cartoon-boy:not(.hair-none) .cb-hair:after{content:"";position:absolute;left:8px;top:28px;width:94px;height:22px;background:inherit;clip-path:polygon(0 0,14% 45%,25% 0,38% 55%,51% 0,65% 50%,78% 0,90% 48%,100% 0,94% 100%,5% 100%)}
+.cartoon-boy[class*="blond"]{--hair:#e2b84f}.cartoon-boy[class*="red-hair"]{--hair:#a74425}.cartoon-boy[class*="ninja-hair"]{--hair:#151820}.cartoon-boy[class*="wizard-hair"]{--hair:#d8d8e5}.cartoon-boy[class*="royal-hair"],.cartoon-boy[class*="princess-hair"]{--hair:#4a281d}
+.cartoon-boy[class*="curly"] .cb-hair{background:radial-gradient(circle,#593621 0 8px,transparent 9px) 0 0/20px 18px,#593621}
+.cartoon-boy:not(.mask-none) .cb-mask{left:17px;top:43px;width:66px;height:27px;border-radius:14px 14px 9px 9px;background:#202633;box-shadow:inset 0 0 0 3px #455a64}
+.cartoon-boy:not(.mask-none) .cb-mask:before,.cartoon-boy:not(.mask-none) .cb-mask:after{content:"";position:absolute;top:8px;width:16px;height:7px;border-radius:50%;background:#b3e5fc}.cartoon-boy:not(.mask-none) .cb-mask:before{left:11px}.cartoon-boy:not(.mask-none) .cb-mask:after{right:11px}
+.cartoon-boy[class*="robot-mask"] .cb-mask,.cartoon-boy[class*="space-mask"] .cb-mask{background:linear-gradient(#cfd8dc,#78909c)}.cartoon-boy[class*="hero-mask"] .cb-mask{background:#d32f2f}.cartoon-boy[class*="dragon-mask"] .cb-mask{background:#2e7d32}
+.cartoon-boy:not(.gloves-none) .cb-arm b{left:-3px;bottom:-7px;width:33px;height:32px;border-radius:45% 45% 12px 12px;background:#455a64;box-shadow:inset 0 -6px #263238}
+.cartoon-boy:not(.outfit-none) .cb-arm:before{content:"";position:absolute;z-index:2;left:-1px;top:-2px;width:calc(100% + 2px);height:48px;border-radius:15px 15px 9px 9px;background:linear-gradient(90deg,color-mix(in srgb,var(--top),#000 16%),var(--top) 42% 72%,color-mix(in srgb,var(--top),#fff 15%));box-shadow:inset 5px 1px 6px #fff3,inset -6px 0 7px #0003,0 4px 4px #0002}.cartoon-boy:not(.outfit-none) .cb-arm:after{content:"";position:absolute;z-index:3;left:1px;top:42px;width:calc(100% - 2px);height:6px;border-radius:0 0 7px 7px;background:color-mix(in srgb,var(--top),#000 22%)}
+.cartoon-boy[class*="fire-gloves"] .cb-arm b{background:#ef6c00}.cartoon-boy[class*="ice-gloves"] .cb-arm b{background:#80deea}.cartoon-boy[class*="golden-gloves"] .cb-arm b{background:#fbc02d}.cartoon-boy[class*="nature-gloves"] .cb-arm b,.cartoon-boy[class*="dragon-gloves"] .cb-arm b{background:#43a047}.cartoon-boy[class*="royal-gloves"] .cb-arm b{background:#7e57c2}
+.cartoon-boy:not(.emblem-none) .cb-torso>span{display:block;z-index:3;width:24px;height:24px;border-radius:50%;background:#ffd54f;box-shadow:inset 0 0 0 4px #fff8,0 2px 4px #0004}
+.cartoon-boy[class*="heart-emblem"] .cb-torso>span{border-radius:50% 50% 45% 45%;background:#e53935}.cartoon-boy[class*="moon-emblem"] .cb-torso>span{background:#fff59d;box-shadow:inset -7px 0 #5c6bc0}.cartoon-boy[class*="shield-emblem"] .cb-torso>span{border-radius:4px 4px 50% 50%;background:#42a5f5}.cartoon-boy[class*="gem-emblem"] .cb-torso>span{rotate:45deg;border-radius:4px;background:#26c6da}
+.cartoon-boy:not(.belt-none) .cb-belt{display:block;background:#4e342e;border-top:4px solid #795548;border-bottom:4px solid #3e2723}.cartoon-boy:not(.belt-none) .cb-belt i{display:block;width:18px;height:15px;margin:-2px auto;background:#ffd54f;border:3px solid #a66b00;border-radius:3px}.cartoon-boy[class*="ninja-belt"] .cb-belt{background:#151820}.cartoon-boy[class*="space-belt"] .cb-belt{background:#eceff1}.cartoon-boy[class*="royal-belt"] .cb-belt{background:#7e57c2}

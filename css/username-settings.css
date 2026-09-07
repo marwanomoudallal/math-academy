@@ -1,0 +1,2 @@
+.username-controls{display:flex;gap:9px;align-items:center}.username-controls .text-input{width:190px;font-size:16px;padding:10px 13px}.username-controls .btn{white-space:nowrap}@media(max-width:600px){.username-setting{align-items:stretch;flex-direction:column;gap:12px}.username-controls{align-items:stretch;flex-direction:column}.username-controls .text-input{width:100%}}
+.username-controls input[readonly]{color:var(--gold);font-weight:900;cursor:default;background:#111a3888}

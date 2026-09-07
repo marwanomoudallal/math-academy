@@ -1,0 +1,17 @@
+/* Refined two-page layout matching the customization-book reference. */
+.book-head{margin:0 42px}
+.book-head h1{font-family:"Comic Sans MS",cursive;font-size:36px;margin:2px 0}
+.book-home{left:18px;top:18px}
+.book-right>h2{text-align:center;font-size:30px;margin:24px 0 8px;color:#444}
+.book-categories{display:grid;grid-template-columns:1fr;gap:1px;margin:5px 52% 10px 8%;max-height:590px}
+.book-categories button{background:transparent;padding:8px;font-size:22px;text-align:center}
+.book-categories button:hover{background:#eaf8fa}
+.book-categories button.active{transform:scale(1.04)}
+.book-items{position:absolute;right:22px;top:155px;width:46%;display:grid;grid-template-columns:1fr;gap:8px;max-height:555px;overflow:auto;padding:8px;border-left:2px solid #b7dce2}
+.book-hero.book-large{transform:scale(1.12)}
+.book-left>h2{position:absolute;right:24px;top:48%;max-width:150px;margin:0;padding:10px 15px;border:2px solid #9bdce7;border-radius:18px;background:#e9fbff;color:#08768c;font-size:20px;overflow-wrap:anywhere;text-align:center}
+html[dir="rtl"] .book-left>h2{right:auto;left:24px}
+html[dir="rtl"] .book-home{left:auto;right:18px}
+html[dir="rtl"] .book-categories{margin:5px 8% 10px 52%}
+html[dir="rtl"] .book-items{right:auto;left:22px;border-left:0;border-right:2px solid #b7dce2}
+@media(max-width:800px){.book-categories{margin:5px 8%;grid-template-columns:repeat(2,1fr)}.book-items{position:static;width:auto;max-height:none;border:0}.book-hero.book-large{transform:scale(1)}.book-left>h2{position:static;max-width:260px;margin:5px auto}}

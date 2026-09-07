@@ -1,0 +1,6 @@
+/* Coding Island is retired. Hide every legacy entry before JavaScript renders. */
+.coding-card,
+.zone.l1,
+[data-page="coding"] {
+  display: none !important;
+}

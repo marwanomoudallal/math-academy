@@ -1,0 +1,64 @@
+html[dir="rtl"] body{text-align:right}html[dir="rtl"] .cool-head,html[dir="rtl"] .infinite-head,html[dir="rtl"] .daily-adventure,html[dir="rtl"] .save-panel,html[dir="rtl"] .access-row{direction:rtl}html[dir="rtl"] .quest-node{padding-left:20px;padding-right:92px}html[dir="rtl"] .quest-node>span{left:auto;right:22px}html[dir="rtl"] .answer-row,html[dir="rtl"] .generator-hero form{direction:rtl}html[dir="rtl"] input,html[dir="rtl"] textarea,html[dir="rtl"] select{text-align:right}html[dir="rtl"] .mini-progress i{margin-left:auto;margin-right:0}@media(max-width:650px){html[dir="rtl"] .quest-node{padding-right:70px}}
+
+.daily-adventure.daily-challenge-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  margin-top: 11px;
+  padding: 16px;
+}
+
+.versus-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 auto 14px;
+  padding: 7px 15px;
+  border: 2px solid var(--gold);
+  border-radius: 999px;
+  background: #16255a;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.versus-timer b { color: var(--gold); font-size: 24px; }
+
+.daily-adventure.daily-challenge-row::before {
+  content: "🔥";
+  font-size: 30px;
+}
+
+.daily-adventure.daily-challenge-row > div {
+  width: 100%;
+}
+
+.daily-adventure.daily-challenge-row > div > span {
+  font-weight: 800;
+}
+
+.daily-adventure.daily-challenge-row h3 {
+  margin: 3px 0;
+  font-size: 1rem;
+}
+
+.daily-adventure.daily-challenge-row small {
+  color: var(--muted);
+}
+
+.daily-adventure.daily-challenge-row .mini-progress {
+  margin-top: 6px;
+}
+
+@media (max-width: 650px) {
+  .daily-adventure.daily-challenge-row {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .daily-adventure.daily-challenge-row > button {
+    grid-column: 2;
+    justify-self: start;
+  }
+}

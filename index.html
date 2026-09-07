@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111a38"><title>BrainQuest Academy</title>
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/username-settings.css?v=2"><link rel="stylesheet" href="css/shop-equipment.css"><link rel="stylesheet" href="css/memory-difficulty.css"><link rel="stylesheet" href="css/language.css"><link rel="stylesheet" href="css/how-to-play.css"><link rel="stylesheet" href="css/remove-coding-island.css?v=1"><link rel="stylesheet" href="css/language-game-visibility.css?v=2">
+</head>
+<body>
+  <div class="sky" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div id="app">
+    <header class="topbar">
+      <button class="brand" data-page="home" aria-label="Home"><span class="brand-gem">B</span><span>BrainQuest <b>Academy</b></span></button>
+      <div class="top-stats"><span class="pill" aria-label="Total experience points">&#9889; XP <b id="xp">0</b></span><span class="pill" aria-label="Coins">🪙 <b id="coins">0</b></span><span class="pill">💎 <b id="gems">0</b></span><button class="icon-btn" data-page="settings" aria-label="Settings">⚙️</button></div>
+    </header>
+    <main id="screen" tabindex="-1"></main>
+    <nav class="dock" aria-label="Main navigation">
+      <button data-page="home"><span>🏠</span>Home</button><button data-page="wardrobe"><span>👕</span>Hero</button><button data-page="map"><span>🗺️</span>Map</button><button data-page="games"><span>🎮</span>Games</button><button data-page="shop"><span>🛍️</span>Shop</button><button data-page="profile"><span>👤</span>Profile</button>
+    </nav>
+  </div>
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true"></div>
+  <div id="toasts" aria-live="polite"></div>
+  <script src="js/save.js?v=20260815-1"></script><script src="js/player.js?v=20260814-2"></script><script src="js/rewards.js?v=20260814-2"></script>
+<script src="js/games/math-battle.js?v=20260814"></script><script src="js/games/math-two-digit.js?v=20260814"></script><script src="js/games/math-wrong-answer.js?v=1"></script><script src="js/games/fraction-kingdom.js?v=20260814"></script><script src="js/games/fraction-answer-shuffle.js?v=20260814"></script><script src="js/games/typing-defense.js?v=20260814-3"></script><script src="js/games/memory-challenge.js?v=20260814"></script><script src="js/games/memory-pattern-effect.js?v=20260814"></script><script src="js/games/memory-difficulty.js?v=20260814"></script><script src="js/main.js?v=20260814"></script><script src="js/xp-coins-hud.js?v=1"></script><script src="js/username-settings.js?v=20260815-1"></script><script src="js/shop-equipment.js?v=20260815-1"></script><script src="js/game-navigation.js?v=20260814-3"></script><script src="js/language.js?v=20260818-1"></script><script src="js/how-to-play.js?v=20260814-2"></script>
+  <script src="js/single-skin-enforcer.js?v=20260814-2"></script>
+  <link rel="stylesheet" href="css/adventure-expansion.css">
+  <script src="js/adventure-expansion.js?v=1"></script>
+  <link rel="stylesheet" href="css/rewards-and-bosses.css">
+  <script src="js/daily-reward-calendar.js?v=2"></script>
+  <script src="js/games/boss-expansion.js?v=1"></script>
+  <link rel="stylesheet" href="css/learning-dashboard.css">
+<script src="js/learning-dashboard.js?v=2"></script>
+   <link rel="stylesheet" href="css/future-realms.css?v=2">
+  <link rel="stylesheet" href="css/hero-room.css?v=1">
+  <link rel="stylesheet" href="css/wardrobe.css?v=1">
+  <link rel="stylesheet" href="css/wardrobe-book.css?v=1">
+  <link rel="stylesheet" href="css/wardrobe-book-refined.css?v=2">
+  <link rel="stylesheet" href="css/wardrobe-boy-avatar.css?v=1">
+  <link rel="stylesheet" href="css/wardrobe-girl-avatar.css?v=4">
+  <link rel="stylesheet" href="css/hero-animations.css?v=1">
+   <link rel="stylesheet" href="css/hero-clothing-art.css?v=4">
+  <link rel="stylesheet" href="css/hero-stage.css?v=1">
+  <link rel="stylesheet" href="css/hero-extra-customization.css?v=1">
+  <link rel="stylesheet" href="css/wardrobe-interface.css?v=4">
+  <link rel="stylesheet" href="css/hero-no-emoji.css?v=20260816-3">
+  <link rel="stylesheet" href="css/hero-3d.css?v=2">
+  <link rel="stylesheet" href="css/hero-full-3d.css?v=2">
+  <link rel="stylesheet" href="css/battle-hero-position.css?v=4">
+  <link rel="stylesheet" href="css/battle-labels-top.css?v=2">
+  <link rel="stylesheet" href="css/gender-profile.css?v=1">
+  <link rel="stylesheet" href="css/hero-name-position.css?v=2">
+  <link rel="stylesheet" href="css/geography-map-game.css?v=1">
+  <link rel="stylesheet" href="css/geography-world-explorer.css?v=2">
+  <link rel="stylesheet" href="css/geography-flight-path.css?v=1">
+  <link rel="stylesheet" href="css/geography-globe-controls.css?v=1">
+  <link rel="stylesheet" href="css/geography-continents.css?v=1">
+  <link rel="stylesheet" href="css/geography-spherical-globe.css?v=1">
+  <link rel="stylesheet" href="css/geography-drawn-flags.css?v=1">
+  <link rel="stylesheet" href="css/investment-simulator.css?v=9">
+  <link rel="stylesheet" href="css/mini-business-manager.css?v=1">
+  <link rel="stylesheet" href="css/mini-business-store.css?v=12">
+  <link rel="stylesheet" href="css/outfit-bundles.css?v=1">
+  <script src="js/games/future-realms.js?v=3"></script>
+  <script src="js/games/future-question-language.js?v=3"></script>
+  <script src="js/extended-language.js?v=16"></script>
+  <script src="js/remove-coding-island.js?v=1"></script>
+  <script src="js/games/future-realms-extra.js?v=2"></script>
+  <script src="js/games/future-realms-extra-language.js?v=2"></script>
+  <script src="js/french-only.js?v=2"></script>
+  <script src="js/daily-challenge-rounds.js?v=1"></script>
+  <script src="js/hero-room.js?v=1"></script>
+  <script src="js/games/geography-map-game.js?v=1"></script>
+  <script src="js/games/geography-world-explorer.js?v=11"></script>
+  <script src="js/games/investment-simulator.js?v=19"></script>
+  <script src="js/games/mini-business-manager.js?v=3"></script>
+  <script src="js/games/mini-business-store.js?v=17"></script>
+  <script src="js/wardrobe.js?v=2"></script>
+  <script src="js/wardrobe-book.js?v=13"></script>
+  <script src="js/wardrobe-boy-avatar.js?v=20260816-3"></script>
+  <script src="js/outfit-bundles.js?v=2"></script>
+  <script src="js/gender-profile.js?v=1"></script>
+  <script src="js/final-render.js?v=1"></script>
+  <link rel="stylesheet" href="css/math-boxing-theme.css?v=4">
+  <script src="js/games/math-boxing-theme.js?v=3"></script>
+  <link rel="stylesheet" href="css/fraction-super-kingdom.css?v=1">
+  <script src="js/games/fraction-super-kingdom.js?v=2"></script>
+  <script src="js/games/fraction-super-language.js?v=1"></script>
+  <link rel="stylesheet" href="css/cool-expansion.css?v=2">
+  <link rel="stylesheet" href="css/cool-expansion-fix.css?v=1">
+  <script src="js/cool-expansion.js?v=2"></script>
+  <link rel="stylesheet" href="css/infinite-academy.css?v=1">
+  <script src="js/infinite-academy.js?v=1"></script>
+  <script src="js/home-layout.js?v=1"></script>
+  <link rel="stylesheet" href="css/final-localization.css?v=2">
+  <script src="js/final-localization.js?v=2"></script>
+  <link rel="stylesheet" href="css/welcome-guide.css?v=7">
+  <script src="js/welcome-guide.js?v=13"></script>
+  <script src="js/fresh-account-guide-trigger.js?v=1"></script>
+  <link rel="stylesheet" href="css/seasonal-theme.css?v=1">
+  <script src="js/seasonal-theme.js?v=1"></script>
+  <script src="js/profile-delete.js?v=1"></script>
+  <link rel="stylesheet" href="css/rewards-customization.css?v=1">
+  <script src="js/rewards-customization.js?v=1"></script>
+  <link rel="stylesheet" href="css/new-games.css?v=1">
+  <script src="js/new-games.js?v=1"></script>
+  <link rel="stylesheet" href="css/multiplayer-arena.css?v=1">
+  <script src="js/multiplayer-arena.js?v=1"></script>
+  <link rel="stylesheet" href="css/learning-tools.css?v=1">
+  <script src="js/learning-tools.js?v=1"></script>
+  <script src="js/extension-localization.js?v=2"></script>
+</body></html>

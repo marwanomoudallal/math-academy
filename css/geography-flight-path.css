@@ -1,0 +1,2 @@
+.flight-path{position:absolute;z-index:2;left:12%;top:28%;width:76%;height:42%;border-top:3px dashed #fff9;border-radius:50%;transform:rotate(-8deg);animation:flight-dash 2.4s linear infinite;pointer-events:none}.flight-path:after{content:"✈";position:absolute;right:8%;top:-17px;font-size:25px;filter:drop-shadow(0 3px 3px #000)}@keyframes flight-dash{50%{opacity:.45;transform:rotate(-8deg) translateY(-5px)}}
+@media(prefers-reduced-motion:reduce){.flight-path{animation:none}}

@@ -1,0 +1,13 @@
+@keyframes hero-breathe{0%,100%{scale:1}50%{scale:1.012 .995}}
+@keyframes hero-blink{0%,46%,50%,100%{transform:scaleY(1)}48%{transform:scaleY(.08)}}
+@keyframes hero-hair-sway{0%,100%{transform:rotate(-1deg) translateX(-1px)}50%{transform:rotate(1.5deg) translateX(1px)}}
+@keyframes hero-cape-sway{0%,100%{transform:skewX(-1deg) rotate(-.5deg)}50%{transform:skewX(3deg) rotate(1deg)}}
+@keyframes hero-celebrate{0%,100%{translate:0 0;rotate:0}22%{translate:0 -24px;rotate:-3deg}45%{translate:0 0;rotate:3deg}68%{translate:0 -12px;rotate:-2deg}}
+@keyframes hero-change{0%{filter:drop-shadow(0 8px 5px #0002);opacity:.55}45%{filter:drop-shadow(0 0 18px #7c5cff);opacity:1}100%{filter:drop-shadow(0 8px 5px #0002);opacity:1}}
+.cartoon-boy{animation:hero-breathe 3.2s ease-in-out infinite;transform-origin:50% 100%}
+.cartoon-boy .cb-head .eye{animation:hero-blink 4.5s ease-in-out infinite;transform-origin:center}
+.cartoon-boy .cb-hair{animation:hero-hair-sway 2.8s ease-in-out infinite;transform-origin:50% 80%}
+.cartoon-boy .cb-cape.show{animation:hero-cape-sway 2.4s ease-in-out infinite;transform-origin:50% 0}
+.cartoon-boy.celebrate{animation:hero-celebrate .9s cubic-bezier(.25,.75,.35,1) 1}
+.cartoon-boy.changing{animation:hero-change .55s ease-out 1}
+@media(prefers-reduced-motion:reduce){.cartoon-boy,.cartoon-boy *{animation:none!important}}

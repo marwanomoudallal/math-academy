@@ -1,0 +1,5 @@
+.battlefield .player-fighter,.battlefield .enemy-fighter{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-height:285px}
+.battlefield .fighter>b{order:-3;position:absolute!important;z-index:20;top:0;left:50%;translate:-50% 0;display:block;min-width:155px;margin:0!important;padding:7px 11px;border-radius:11px;background:#24344df2;color:#fff;text-align:center;line-height:1.2;white-space:nowrap;box-shadow:0 4px 8px #0005}
+.battlefield .fighter>.hp{order:-2;position:absolute;z-index:18;top:42px;left:50%;translate:-50% 0;margin:0}
+.battlefield .fighter>.sprite{order:-1;z-index:7;margin-top:72px;overflow:visible}
+@media(max-width:600px){.battlefield .player-fighter,.battlefield .enemy-fighter{min-height:235px}.battlefield .fighter>b{min-width:120px;max-width:135px;padding:6px;font-size:11px;overflow:hidden;text-overflow:ellipsis}.battlefield .fighter>.hp{top:36px;width:120px}.battlefield .fighter>.sprite{margin-top:62px}}
