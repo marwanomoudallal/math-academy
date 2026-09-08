@@ -1,0 +1,7 @@
+/* Keep the Fraction Kingdom scene focused on the learning challenge. */
+.super-fraction .kingdom-water,
+.super-fraction .fraction-hero,
+.super-fraction .fraction-enemy,
+.super-fraction .villagers {
+  display: none !important;
+}
