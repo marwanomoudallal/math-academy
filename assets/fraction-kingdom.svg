@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Fraction Kingdom</title>
+  <defs>
+    <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#0e4f9d"/><stop offset="1" stop-color="#062b6d"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="256" height="256" rx="42" fill="url(#wall)"/>
+  <g stroke="#1f72b8" stroke-width="2" opacity=".55"><path d="M0 45h256M0 90h256M0 135h256M0 180h256M0 225h256"/><path d="M35 0v45M105 0v45M185 0v45M70 45v45M150 45v45M225 45v45M35 90v45M105 90v45M185 90v45M70 135v45M150 135v45M225 135v45M35 180v45M105 180v45M185 180v45"/></g>
+  <g filter="url(#glow)" font-family="Arial,sans-serif" text-anchor="middle" fill="none" stroke-linejoin="round">
+    <text x="74" y="92" font-size="88" fill="#38f4ff" stroke="#bfffff" stroke-width="3">1</text>
+    <path d="M26 124h101" stroke="#3ff7ff" stroke-width="6"/>
+    <text x="76" y="205" font-size="88" fill="#32dfff" stroke="#d0ffff" stroke-width="3">2</text>
+    <path d="M170 51a60 60 0 1 1 0 120a60 60 0 1 1 0-120z" stroke="#00ffd0" stroke-width="8"/>
+    <path d="M170 66v90" stroke="#62ffef" stroke-width="5"/><path d="M170 66h24a45 45 0 0 1 0 90h-24" stroke="#80ff79" stroke-width="7"/>
+  </g>
+  <g fill="none" stroke-linejoin="round" filter="url(#glow)"><path d="M17 194h222l10 45H27z" stroke="#23f7ff" stroke-width="5"/><rect x="37" y="207" width="83" height="21" rx="4" fill="#ff3dba" stroke="#ffb2ef" stroke-width="4"/><rect x="139" y="207" width="83" height="21" rx="4" fill="#123c83" stroke="#25edff" stroke-width="4"/></g>
+</svg>
