@@ -3,6 +3,15 @@
 .game-card .emoji:before{content:"";position:absolute;inset:9px;border-radius:28% 38% 35% 42%;background:linear-gradient(145deg,#fff9,#ffffff18 42%,#11193688);box-shadow:inset 7px 7px 10px #fff6,inset -9px -11px 14px #080d2b88,0 6px 10px #080d2b66;transform:rotate(-8deg)}
 .game-card .emoji:after{position:relative;z-index:1;color:#fff;font:900 31px/1 ui-rounded,"Segoe UI",sans-serif;text-shadow:0 3px 0 #11193666}
 .game-card.purple .emoji:after{content:"+"}.game-card.teal .emoji:after{content:"△"}.game-card.orange .emoji:after{content:"⌕"}.game-card.pink .emoji:after{content:"• •";letter-spacing:2px}
+.game-card.purple .emoji:before{border-radius:50%;background:linear-gradient(145deg,#70d7ff,#3552c8 58%,#161d68)}
+.game-card.teal .emoji:before{border-radius:12% 52% 18% 52%;clip-path:polygon(50% 0,100% 100%,0 100%);background:linear-gradient(145deg,#a9ffed,#1b9f9a 56%,#0b4b67)}
+.game-card.orange .emoji:before{border-radius:50%;background:radial-gradient(circle at 32% 25%,#fff9 0 8%,transparent 9%),linear-gradient(145deg,#ffd66e,#ed713d 55%,#762451)}
+.game-card.pink .emoji:before{border-radius:24%;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);background:linear-gradient(145deg,#f7a4ff,#8d4bd1 58%,#43266d)}
+.game-card.purple .emoji:after{color:#fff}.game-card.teal .emoji:after{color:#ecffff}.game-card.orange .emoji:after{color:#fff5d0}.game-card.pink .emoji:after{color:#fff}
+.rapid-card .emoji:before{border-radius:44% 18% 42% 24%;background:linear-gradient(145deg,#fff18a,#ff9e27 55%,#ba2e42)}
+.geometry-card .emoji:before{border-radius:14%;clip-path:polygon(50% 0,100% 100%,0 100%);background:linear-gradient(145deg,#d5ffff,#27b6c2 56%,#1d417a)}
+.detective-card .emoji:before{border-radius:50%;background:linear-gradient(145deg,#ffd6a4,#db6a91 55%,#54265e)}
+.investment-card .emoji:before{border-radius:24% 48% 22% 44%;background:linear-gradient(145deg,#d3ffce,#45ba83 55%,#15536a)}
 .rapid-card .emoji:after{content:"+"}.geometry-card .emoji:after{content:"△"}.detective-card .emoji:after{content:"⌕"}.investment-card .emoji:after{content:"↗"}.business-card .emoji:after{content:"▦"}
 .world .zone span{font-size:0;display:grid;place-items:center;width:58px;height:58px;margin:0 auto 7px;border-radius:35% 45% 40% 30%;background:linear-gradient(145deg,#fff8,#ffffff14 45%,#11193688);box-shadow:inset 6px 6px 9px #fff5,inset -8px -9px 12px #080d2b88,0 6px 9px #080d2b55;transform:rotate(-7deg)}
 .world .zone span:after{color:#fff;font:900 28px/1 ui-rounded,"Segoe UI",sans-serif;text-shadow:0 3px 0 #11193666}.world .zone.z1 span:after{content:"+"}.world .zone.z2 span:after{content:"△"}.world .zone.z3 span:after{content:"⌨"}.world .zone.z4 span:after{content:"• •";letter-spacing:2px}
