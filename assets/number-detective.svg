@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Number Detective</title>
+  <defs><radialGradient id="bg"><stop stop-color="#123b77"/><stop offset="1" stop-color="#020c2b"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <rect width="256" height="256" rx="42" fill="url(#bg)" stroke="#22ecff" stroke-width="5"/>
+  <g fill="none" stroke="#14bce8" stroke-width="2" opacity=".8"><path d="M20 54h37l15 15h24M23 169h32l13-13h29M208 70h28M206 184h31"/><circle cx="57" cy="54" r="5"/><circle cx="67" cy="169" r="5"/><circle cx="208" cy="70" r="5"/></g>
+  <path d="M79 93l38-20h54l30 30-12 47-45 23-48-22z" fill="#051a3c" stroke="#20f1ff" stroke-width="4" filter="url(#glow)"/><path d="M94 94q50-33 97 3l-9 48-45 20-46-20z" fill="#061b43" stroke="#12c8ef" stroke-width="3"/><path d="M90 78q18-42 56-42t50 42l-12 23H101z" fill="#071431" stroke="#19e9ff" stroke-width="4"/><path d="M92 100h101" stroke="#ffcf67" stroke-width="7"/>
+  <circle cx="136" cy="134" r="23" fill="#0b274e" stroke="#ffd06e" stroke-width="7"/><path d="M154 151l38 45" stroke="#f2ad4e" stroke-width="10" stroke-linecap="round"/><path d="M129 127h14M136 120v28" stroke="#6defff" stroke-width="4"/>
+  <text x="128" y="241" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="14" font-weight="900" fill="#fff">NUMBER DETECTIVE</text>
+</svg>
