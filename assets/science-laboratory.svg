@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Science Laboratory</title>
+  <rect width="256" height="256" rx="42" fill="#f5fbff"/>
+  <g stroke="#18344e" stroke-width="4" stroke-linejoin="round"><path d="M119 23h18v72l34 66a19 19 0 0 1-17 28H102a19 19 0 0 1-17-28l34-66z" fill="#d5f6ff"/><path d="M95 145h67l9 18a19 19 0 0 1-17 26h-52a19 19 0 0 1-17-26z" fill="#53d6e8"/><path d="M119 23h18" fill="none" stroke-linecap="round"/><path d="M109 134h39" fill="none"/></g>
+  <g stroke="#18344e" stroke-width="4"><path d="M47 38h16v46l18 35a14 14 0 0 1-12 21H41a14 14 0 0 1-12-21l18-35z" fill="#a8ecff"/><path d="M33 101h44" fill="none"/><path d="M194 35h14v45l17 33a13 13 0 0 1-11 19h-26a13 13 0 0 1-11-19l17-33z" fill="#ff6aa5"/><path d="M186 103h32" fill="none"/></g>
+  <g stroke="#18344e" stroke-width="4"><path d="M83 53h15v22l14 27a11 11 0 0 1-10 16H79a11 11 0 0 1-10-16l14-27z" fill="#ffcf67"/><path d="M76 91h29" fill="none"/><circle cx="198" cy="157" r="19" fill="#f1d4ff"/><path d="M188 157h20M198 147v20" fill="none"/></g>
+  <g fill="#ff8a5b" stroke="#18344e" stroke-width="3"><circle cx="39" cy="174" r="7"/><circle cx="220" cy="205" r="8"/><circle cx="75" cy="190" r="5"/></g>
+  <text x="128" y="235" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="17" font-weight="900" fill="#18344e">SCIENCE LAB</text>
+</svg>
