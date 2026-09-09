@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Geography World</title>
+  <defs><radialGradient id="ocean"><stop stop-color="#2d9cff"/><stop offset=".7" stop-color="#0752cc"/><stop offset="1" stop-color="#051f75"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <rect width="256" height="256" rx="42" fill="#061e70"/><circle cx="128" cy="128" r="100" fill="url(#ocean)" stroke="#43d9ff" stroke-width="5" filter="url(#glow)"/>
+  <g fill="#ed5148" stroke="#ffe36d" stroke-width="2"><path d="M64 69l22-18 25 9 7 24-22 13-26-8z"/><path d="M96 123l22-12 19 13-10 19-22 5z"/><path d="M139 57l24-12 20 18-10 20-22-2z"/><path d="M141 112l26-6 22 19-14 22-28-6z"/><path d="M110 160l24 4 12 25-26 19-23-18z"/><path d="M64 142l25 8 8 25-22 12-25-21z"/></g>
+  <g stroke="#eaffff" fill="none" opacity=".75"><path d="M40 110q88-66 177 2"/><path d="M39 146q91 63 180-4"/><ellipse cx="128" cy="128" rx="48" ry="98"/><ellipse cx="128" cy="128" rx="82" ry="98"/></g>
+  <text x="128" y="238" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="15" font-weight="900" fill="#fff">GEOGRAPHY WORLD</text>
+</svg>
