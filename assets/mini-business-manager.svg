@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Mini Business Manager</title>
+  <rect width="256" height="256" rx="42" fill="#f8fcff"/>
+  <g stroke="#111b2d" stroke-width="6" stroke-linejoin="round"><path d="M10 170l22-12-7-20 22-22 20 8 15-18h29l10 20 22 4 15 22-14 17 8 22-24 23-19-8-15 17H64l-10-20-25-3z" fill="#9aaabd"/><path d="M36 102a52 52 0 1 1-20 47" fill="#d4f3ff"/><path d="M36 102h-1M78 70v31h29" fill="none" stroke-linecap="round"/>
+  <path d="M101 64c0-21 17-38 38-38h33c27 0 46 19 46 46v35h-38V66H101z" fill="#bd604e"/><rect x="105" y="73" width="81" height="99" rx="33" fill="#ffbfaa"/><path d="M105 111H94a17 17 0 0 0 0 34h11M186 111h11a17 17 0 0 1 0 34h-11" fill="#ff9f87"/><path d="M127 106v8M165 106v8M132 130q13 11 26 0M143 130h3" fill="none" stroke-linecap="round"/><path d="M133 171v13l-15 12 11 15h28l11-15-15-12v-13" fill="#f58a78"/><path d="M105 173l-33 20v48h112v-48l-33-20-23 25z" fill="#e9f7ff"/><path d="M113 187l15 17 15-17" fill="none"/><path d="M136 207l-8 34h26l-8-34" fill="#f15f34"/></g>
+  <circle cx="215" cy="179" r="34" fill="#ffca3d" stroke="#111b2d" stroke-width="6"/><text x="215" y="195" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="45" font-weight="900" fill="#111b2d">$</text><text x="128" y="253" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="13" fill="#243552">MINI BUSINESS</text>
+</svg>
