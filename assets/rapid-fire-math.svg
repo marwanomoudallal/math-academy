@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Rapid Fire Math</title>
+  <defs><radialGradient id="bg"><stop stop-color="#5524bb"/><stop offset=".55" stop-color="#19104c"/><stop offset="1" stop-color="#06163f"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <rect width="256" height="256" rx="42" fill="url(#bg)"/>
+  <g stroke="#7a31ff" stroke-width="4" opacity=".8"><path d="M10 82h47M3 101h43M13 120h38M12 140h46"/><path d="M203 48h37M213 63h28"/></g>
+  <circle cx="94" cy="128" r="62" fill="#090c36" stroke="#963fff" stroke-width="7" filter="url(#glow)"/><path d="M94 69v10M94 177v10M35 128h10M143 128h10M52 86l8 8M136 166l8 8" stroke="#a441ff" stroke-width="3"/>
+  <path d="M94 128l42-28" stroke="#ff38f1" stroke-width="5"/><circle cx="94" cy="128" r="8" fill="#3f0ba6" stroke="#c33bff" stroke-width="4"/><path d="M58 57c24-15 51-19 76-11" fill="none" stroke="#8d30ff" stroke-width="3"/>
+  <g fill="#f4f4ff" font-family="Arial Black,Arial,sans-serif" font-weight="900" filter="url(#glow)"><text x="139" y="103" font-size="72">+</text><text x="139" y="170" font-size="72">×</text><text x="195" y="152" font-size="62">÷</text></g>
+  <text x="128" y="232" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="14" font-weight="900" fill="#fff">RAPID FIRE MATH</text>
+</svg>
