@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Space Mission</title>
+  <defs><radialGradient id="sky"><stop stop-color="#243b83"/><stop offset="1" stop-color="#080e2d"/></radialGradient><linearGradient id="moon" y2="1"><stop stop-color="#ffd675"/><stop offset="1" stop-color="#a76734"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <rect width="256" height="256" rx="42" fill="url(#sky)"/>
+  <g fill="#fff"><circle cx="25" cy="35" r="2"/><circle cx="220" cy="49" r="2"/><circle cx="41" cy="90" r="1.5"/><circle cx="211" cy="124" r="1.5"/><circle cx="73" cy="24" r="1.4"/><circle cx="179" cy="23" r="1.4"/></g>
+  <circle cx="127" cy="151" r="65" fill="url(#moon)" stroke="#ffe99b" stroke-width="3"/>
+  <g fill="#8e5c38" opacity=".7"><circle cx="94" cy="125" r="12"/><circle cx="143" cy="105" r="8"/><circle cx="157" cy="165" r="14"/><circle cx="112" cy="181" r="7"/></g>
+  <g transform="rotate(22 128 133)" filter="url(#glow)"><path d="M128 48l22 65-22 80-22-80z" fill="#f5f7ff" stroke="#d6e6ff" stroke-width="3"/><path d="M128 48l22 65-22 12z" fill="#e4443e"/><circle cx="128" cy="109" r="13" fill="#47d7ee" stroke="#bafaff" stroke-width="4"/><path d="M106 87l-22 13 18 15M150 87l22 13-18 15" fill="#ff4e31" stroke="#ffd4a0" stroke-width="3"/><path d="M116 179l12 19 12-19-12-8z" fill="#ffb632" stroke="#ffdf73" stroke-width="3"/></g>
+  <path d="M5 225q64-28 128 0t123 0v31H0z" fill="#196f9a"/><path d="M0 238q45-17 88 0t82 0 86 0" fill="none" stroke="#ffe67a" stroke-width="5"/>
+  <text x="128" y="29" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="15" font-weight="900" fill="#fff">MOON MISSION</text>
+</svg>
