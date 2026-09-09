@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Math Battle</title>
+  <desc id="desc">Colorful Math Battle versus badge</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="35%"><stop offset="0" stop-color="#235dc8"/><stop offset="1" stop-color="#07153d"/></radialGradient>
+    <linearGradient id="red" x1="0" x2="1"><stop stop-color="#ff684d"/><stop offset="1" stop-color="#c5142e"/></linearGradient>
+    <linearGradient id="blue" x1="0" x2="1"><stop stop-color="#51d8ff"/><stop offset="1" stop-color="#1264dd"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity=".6"/></filter>
+  </defs>
+  <rect width="256" height="256" rx="42" fill="url(#bg)"/>
+  <g stroke="#ffd84a" stroke-width="3" opacity=".8"><path d="M18 35l54 55M238 35l-54 55M18 218l54-55M238 218l-54-55"/><path d="M128 8v48M128 200v48"/></g>
+  <g font-family="Arial Black,Arial,sans-serif" text-anchor="middle" font-weight="900" filter="url(#shadow)">
+    <text x="128" y="48" font-size="30" fill="#ffe34f" stroke="#8d1a1a" stroke-width="4" paint-order="stroke">MATH</text>
+    <text x="128" y="80" font-size="27" fill="#fff" stroke="#143b9b" stroke-width="5" paint-order="stroke">BATTLE</text>
+    <text x="128" y="155" font-size="76" fill="url(#red)" stroke="#fff" stroke-width="5" paint-order="stroke">VS</text>
+    <rect x="45" y="171" width="166" height="29" rx="12" fill="#f15b2a" stroke="#ffc832" stroke-width="3"/>
+    <text x="128" y="193" font-size="19" fill="#fff">SOLVE</text>
+    <text x="128" y="225" font-size="15" fill="#ffd94c">QUICK MATH GAME</text>
+  </g>
+  <g stroke="#fff" stroke-width="7" stroke-linecap="round" filter="url(#shadow)"><path d="M28 116l33 33"/><path d="M228 116l-33 33"/></g>
+  <g font-family="Arial,sans-serif" font-size="30" font-weight="900" text-anchor="middle"><text x="38" y="119" fill="#54e66d">+</text><text x="218" y="119" fill="#ff574d">−</text><text x="37" y="193" fill="#ffcf3f">×</text><text x="219" y="193" fill="#63dcff">÷</text></g>
+</svg>
