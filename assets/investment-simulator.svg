@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Investment Simulator</title>
+  <defs><linearGradient id="bg" y2="1"><stop stop-color="#4aa1e8"/><stop offset=".55" stop-color="#3c82c9"/><stop offset=".56" stop-color="#7b2e68"/><stop offset="1" stop-color="#631949"/></linearGradient><linearGradient id="stone" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#9198b0"/></linearGradient></defs>
+  <rect width="256" height="256" rx="42" fill="url(#bg)"/>
+  <path d="M39 78l89-51 89 51z" fill="#f9f9f9" stroke="#24324e" stroke-width="4"/><path d="M28 78h200v15H28z" fill="#fff" stroke="#24324e" stroke-width="4"/>
+  <g fill="url(#stone)" stroke="#263450" stroke-width="4"><path d="M44 93h22v93H44zM88 93h22v93H88zM146 93h22v93h-22zM190 93h22v93h-22z"/><path d="M32 186h192v16H32z"/><path d="M63 202h130v13H63z"/><path d="M63 215h130v13H63z"/></g>
+  <text x="128" y="157" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="78" font-weight="900" fill="#ffd500" stroke="#594d21" stroke-width="3" paint-order="stroke">$</text>
+</svg>
