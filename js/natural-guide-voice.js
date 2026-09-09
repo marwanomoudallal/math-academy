@@ -2,6 +2,9 @@
 (function () {
   if (!('speechSynthesis' in window) || !window.SpeechSynthesisUtterance) return;
   const nativeSpeak = speechSynthesis.speak.bind(speechSynthesis);
+  const nativeCancel = speechSynthesis.cancel.bind(speechSynthesis);
+  let pendingTimer = null;
+  let pendingCleanup = null;
   const feminine = /female|woman|zira|susan|samantha|victoria|hazel|aria|ava|allison|serena|salli|joanna|kendra|kimberly|ivy|emma|olivia|linda|heera|kalpana|jenny|sara/i;
   const masculine = /male|man|david|mark|james|daniel|alex|george|guy|thomas|brian|fred|ryan|liam/i;
   const natural = /neural|natural|online|premium|enhanced|google|siri|microsoft/i;
@@ -19,14 +22,39 @@
     })[0];
   }
 
+  speechSynthesis.cancel = function () {
+    if (pendingTimer) clearTimeout(pendingTimer);
+    if (pendingCleanup) pendingCleanup();
+    pendingTimer = null;
+    pendingCleanup = null;
+    return nativeCancel();
+  };
+
   speechSynthesis.speak = function (utterance) {
     if (utterance && utterance.lang && /^(en|fr|ar)-/i.test(utterance.lang)) {
       const voice = chooseVoice(utterance);
-      if (voice) utterance.voice = voice;
       utterance.rate = window.Player?.data?.gender === 'girl' ? 0.94 : 0.91;
       utterance.pitch = window.Player?.data?.gender === 'girl' ? 1.08 : 0.97;
       utterance.volume = 0.98;
       utterance.text = String(utterance.text || '').replace(/\s+/g, ' ').trim();
+      if (voice) utterance.voice = voice;
+      if (!voice && speechSynthesis.getVoices().length === 0) {
+        let started = false;
+        const speakWhenReady = () => {
+          if (started) return;
+          started = true;
+          pendingTimer = null;
+          speechSynthesis.removeEventListener('voiceschanged', speakWhenReady);
+          pendingCleanup = null;
+          const loadedVoice = chooseVoice(utterance);
+          if (loadedVoice) utterance.voice = loadedVoice;
+          nativeSpeak(utterance);
+        };
+        speechSynthesis.addEventListener('voiceschanged', speakWhenReady, { once: true });
+        pendingCleanup = () => speechSynthesis.removeEventListener('voiceschanged', speakWhenReady);
+        pendingTimer = setTimeout(speakWhenReady, 350);
+        return;
+      }
     }
     return nativeSpeak(utterance);
   };
