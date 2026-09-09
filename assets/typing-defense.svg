@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Typing Defense</title>
+  <defs><linearGradient id="bg" y2="1"><stop stop-color="#071a2c"/><stop offset="1" stop-color="#020c18"/></linearGradient><linearGradient id="cyan"><stop stop-color="#eaffff"/><stop offset=".45" stop-color="#16f7ff"/><stop offset="1" stop-color="#087eae"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <rect width="256" height="256" rx="42" fill="url(#bg)"/>
+  <g fill="none" stroke="#0deaff" stroke-width="2" opacity=".8"><path d="M9 34V10h25M222 10h25v25M9 222v24h25M222 246h25v-24"/><path d="M0 72h18M238 72h18M0 184h18M238 184h18"/></g>
+  <text x="128" y="51" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="27" font-weight="900" fill="url(#cyan)" filter="url(#glow)">TYPING</text>
+  <g filter="url(#glow)" stroke="url(#cyan)" fill="none" stroke-linejoin="round"><path d="M128 42v96" stroke-width="5"/><path d="M116 140h24l12 44H104z" fill="#18304b" stroke-width="4"/><path d="M104 184h48l-7 16h-34z" fill="#0c748e" stroke-width="4"/><path d="M110 155h36M108 168h40" stroke-width="3"/><path d="M124 139h8" stroke="#fff" stroke-width="7"/></g>
+  <g fill="#20f7ff" opacity=".9"><circle cx="79" cy="21" r="3"/><circle cx="94" cy="30" r="2"/><circle cx="166" cy="24" r="3"/><circle cx="183" cy="15" r="2"/></g>
+  <path d="M30 210h52l13-9 20 13 24-18 20 14 22-8" fill="none" stroke="#15efff" stroke-width="3" filter="url(#glow)"/>
+  <circle cx="190" cy="184" r="38" fill="#071827" stroke="#14f4ff" stroke-width="3"/><text x="190" y="181" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="900" fill="#fff">TYPING</text><path d="M190 186v21l-8 8h16l-8-8" fill="none" stroke="#1bf5ff" stroke-width="2"/>
+</svg>
