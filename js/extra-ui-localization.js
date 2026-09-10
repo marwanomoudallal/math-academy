@@ -36,6 +36,23 @@
       'Your answer': 'Ta réponse',
       'Check Answer': 'Vérifier la réponse',
       'Take your time. Mistakes do not remove health.': 'Prends ton temps. Les erreurs ne retirent pas de vie.'
+      ,'Dog': 'Chien', 'Cat': 'Chat', 'Baby Dragon': 'Bébé dragon', 'Mini Robot': 'Mini robot',
+      'Fox': 'Renard', 'Owl': 'Hibou', 'Penguin': 'Pingouin', 'Unicorn': 'Licorne', 'Phoenix': 'Phénix',
+      'One tap equips everything': 'Un clic équipe tout', 'Complete Outfit Sets': 'Ensembles complets',
+      'Each set includes matching clothes and accessories.': 'Chaque ensemble comprend des vêtements et accessoires assortis.',
+      '10 ready-made sets': '10 ensembles prêts à porter', 'Buy Full Set': 'Acheter l’ensemble complet',
+      'Equip Full Set': 'Équiper l’ensemble complet', 'Complete set owned': 'Ensemble complet possédé',
+      'Shadow Ninja Set': 'Ensemble ninja des ombres', 'Moon Knight Set': 'Ensemble chevalier lunaire',
+      'Galaxy Space Set': 'Ensemble espace galaxie', 'Dragon Rider Set': 'Ensemble cavalier dragon',
+      'Grand Wizard Set': 'Ensemble grand sorcier', 'Superhero Set': 'Ensemble super-héros',
+      'Forest Explorer Set': 'Ensemble explorateur de la forêt', 'Crystal Royal Set': 'Ensemble royal de cristal',
+      'Phoenix Fire Set': 'Ensemble feu du phénix', 'Ultimate Galaxy Set': 'Ensemble galaxie ultime',
+      'Fraction Kingdom': 'Royaume des fractions', 'Practise fractions to strengthen this skill.': 'Pratique les fractions pour renforcer cette compétence.',
+      'Ninja Pants': 'Pantalon ninja', 'Shadow Shoes': 'Chaussures des ombres', 'Ninja Mask': 'Masque ninja', 'Ninja Gloves': 'Gants ninja', 'Ninja Belt': 'Ceinture ninja',
+      'Knight Pants': 'Pantalon de chevalier', 'Knight Boots': 'Bottes de chevalier', 'Knight Mask': 'Masque de chevalier', 'Power Gloves': 'Gants de puissance', 'Champion Belt': 'Ceinture de champion',
+      'Space Pants': 'Pantalon spatial', 'Rocket Shoes': 'Chaussures fusée', 'Space Mask': 'Masque spatial', 'Space Gloves': 'Gants spatiaux', 'Space Belt': 'Ceinture spatiale',
+      'Dragon Pants': 'Pantalon de dragon', 'Dragon Mask': 'Masque de dragon', 'Dragon Gloves': 'Gants de dragon', 'Dragon Belt': 'Ceinture de dragon',
+      'Royal Pants': 'Pantalon royal', 'Royal Shoes': 'Chaussures royales', 'Wizard Hat': 'Chapeau de sorcier', 'Royal Gloves': 'Gants royaux', 'Magic Belt': 'Ceinture magique'
     },
     ar: {
       'Daily Reward': 'المكافأة اليومية',
@@ -72,6 +89,23 @@
       'Your answer': 'إجابتك',
       'Check Answer': 'تحقق من الإجابة',
       'Take your time. Mistakes do not remove health.': 'خذ وقتك. الأخطاء لا تنقص الأرواح.'
+      ,'Dog': 'كلب', 'Cat': 'قطة', 'Baby Dragon': 'تنين صغير', 'Mini Robot': 'روبوت صغير',
+      'Fox': 'ثعلب', 'Owl': 'بومة', 'Penguin': 'بطريق', 'Unicorn': 'وحيد القرن', 'Phoenix': 'عنقاء',
+      'One tap equips everything': 'ضغطة واحدة تجهز كل شيء', 'Complete Outfit Sets': 'مجموعات الملابس الكاملة',
+      'Each set includes matching clothes and accessories.': 'كل مجموعة تضم ملابس وإكسسوارات متناسقة.',
+      '10 ready-made sets': '10 مجموعات جاهزة', 'Buy Full Set': 'اشترِ المجموعة كاملة',
+      'Equip Full Set': 'جهّز المجموعة كاملة', 'Complete set owned': 'المجموعة الكاملة مملوكة',
+      'Shadow Ninja Set': 'مجموعة نينجا الظلال', 'Moon Knight Set': 'مجموعة فارس القمر',
+      'Galaxy Space Set': 'مجموعة فضاء المجرة', 'Dragon Rider Set': 'مجموعة راكب التنين',
+      'Grand Wizard Set': 'مجموعة الساحر العظيم', 'Superhero Set': 'مجموعة البطل الخارق',
+      'Forest Explorer Set': 'مجموعة مستكشف الغابة', 'Crystal Royal Set': 'مجموعة الكريستال الملكية',
+      'Phoenix Fire Set': 'مجموعة نار العنقاء', 'Ultimate Galaxy Set': 'مجموعة المجرة النهائية',
+      'Fraction Kingdom': 'مملكة الكسور', 'Practise fractions to strengthen this skill.': 'تدرّب على الكسور لتقوية هذه المهارة.',
+      'Ninja Pants': 'سروال النينجا', 'Shadow Shoes': 'أحذية الظلال', 'Ninja Mask': 'قناع النينجا', 'Ninja Gloves': 'قفازات النينجا', 'Ninja Belt': 'حزام النينجا',
+      'Knight Pants': 'سروال الفارس', 'Knight Boots': 'حذاء الفارس', 'Knight Mask': 'قناع الفارس', 'Power Gloves': 'قفازات القوة', 'Champion Belt': 'حزام البطل',
+      'Space Pants': 'سروال الفضاء', 'Rocket Shoes': 'حذاء الصاروخ', 'Space Mask': 'قناع الفضاء', 'Space Gloves': 'قفازات الفضاء', 'Space Belt': 'حزام الفضاء',
+      'Dragon Pants': 'سروال التنين', 'Dragon Mask': 'قناع التنين', 'Dragon Gloves': 'قفازات التنين', 'Dragon Belt': 'حزام التنين',
+      'Royal Pants': 'السروال الملكي', 'Royal Shoes': 'الحذاء الملكي', 'Wizard Hat': 'قبعة الساحر', 'Royal Gloves': 'القفازات الملكية', 'Magic Belt': 'الحزام السحري'
     }
   };
 
@@ -91,6 +125,14 @@
       const tried = value.match(/^(\d+) Tried$/);
       if (tried) translated = language === 'fr' ? `${tried[1]} essayées` : `تمت محاولة ${tried[1]}`;
       if (translated) node.nodeValue = node.nodeValue.replace(value, translated);
+      else {
+        let updated = node.nodeValue;
+        Object.entries(dictionary).sort((a, b) => b[0].length - a[0].length).forEach(([from, to]) => {
+          const escaped = from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          updated = updated.replace(new RegExp(`\\b${escaped}\\b`, 'g'), to);
+        });
+        if (updated !== node.nodeValue) node.nodeValue = updated;
+      }
     });
   }
 
