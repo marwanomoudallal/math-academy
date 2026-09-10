@@ -35,6 +35,7 @@
       'Correct': 'Correctes',
       'Your answer': 'Ta réponse',
       'Check Answer': 'Vérifier la réponse',
+      'PUNCH': 'FRAPPER', 'Punch': 'Frapper', 'Skip question': 'Passer la question',
       'Take your time. Mistakes do not remove health.': 'Prends ton temps. Les erreurs ne retirent pas de vie.'
       ,'Dog': 'Chien', 'Cat': 'Chat', 'Baby Dragon': 'Bébé dragon', 'Mini Robot': 'Mini robot',
       'Fox': 'Renard', 'Owl': 'Hibou', 'Penguin': 'Pingouin', 'Unicorn': 'Licorne', 'Phoenix': 'Phénix',
@@ -88,6 +89,7 @@
       'Correct': 'صحيحة',
       'Your answer': 'إجابتك',
       'Check Answer': 'تحقق من الإجابة',
+      'PUNCH': 'اضرب', 'Punch': 'اضرب', 'Skip question': 'تخطَّ السؤال',
       'Take your time. Mistakes do not remove health.': 'خذ وقتك. الأخطاء لا تنقص الأرواح.'
       ,'Dog': 'كلب', 'Cat': 'قطة', 'Baby Dragon': 'تنين صغير', 'Mini Robot': 'روبوت صغير',
       'Fox': 'ثعلب', 'Owl': 'بومة', 'Penguin': 'بطريق', 'Unicorn': 'وحيد القرن', 'Phoenix': 'عنقاء',
