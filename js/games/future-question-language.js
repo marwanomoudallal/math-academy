@@ -74,9 +74,25 @@
     question.answer = labels[originalAnswer] || originalAnswer;
   }
 
+  function translateGeneratedScience(question, language) {
+    if (language === 'en' || !question?.text) return;
+    const text = question.text;
+    let match = text.match(/^A rover travels (\d+) meters in (\d+) seconds\. What is its speed\?$/);
+    if (match) {
+      question.text = language === 'fr' ? `Un rover parcourt ${match[1]} mètres en ${match[2]} secondes. Quelle est sa vitesse ?` : `تقطع مركبة ${match[1]} متراً خلال ${match[2]} ثوانٍ. ما سرعتها؟`;
+      question.explain = language === 'fr' ? `La vitesse est la distance divisée par le temps : ${match[1]} ÷ ${match[2]}.` : `السرعة تساوي المسافة مقسومة على الزمن: ${match[1]} ÷ ${match[2]}.`;
+      return;
+    }
+    match = text.match(/^A scientist places (\d+) seeds in each of (\d+) trays\. How many seeds are there altogether\?$/);
+    if (match) question.text = language === 'fr' ? `Un scientifique place ${match[1]} graines dans chacun de ${match[2]} plateaux. Combien y a-t-il de graines au total ?` : `يضع عالم ${match[1]} بذرة في كل واحد من ${match[2]} صوانٍ. كم بذرة توجد إجمالاً؟`;
+    match = question.text.match(/^A liquid warms from ([-\d]+)°C by (\d+)°C\. What is its final temperature\?$/);
+    if (match) question.text = language === 'fr' ? `Un liquide se réchauffe de ${match[1]}°C de ${match[2]}°C. Quelle est sa température finale ?` : `يسخن سائل من ${match[1]}°C بمقدار ${match[2]}°C. ما درجة حرارته النهائية؟`;
+  }
+
   FutureRealms.next = function localizedFutureQuestion() {
     originalNext();
     const language = Player.data.settings.language || 'en';
     if (this.current === 'geography') translateGeneratedGeography(this.question, language);
+    if (this.current === 'science') translateGeneratedScience(this.question, language);
   };
 })();
