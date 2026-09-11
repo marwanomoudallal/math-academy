@@ -1,2 +1,2 @@
-.game-card.orange .emoji,.game-card[data-page="typing"] .emoji{font-size:0;width:82px;height:82px;background-image:url('../assets/typing-defense-v2.svg')!important;background-position:center;background-size:contain;background-repeat:no-repeat;filter:drop-shadow(0 8px 6px #070d2588)}
-.world .zone.z3 span{font-size:0;width:58px;height:58px;margin:0 auto 7px;background:url('../assets/typing-defense-v2.svg') center/contain no-repeat;filter:drop-shadow(0 7px 5px #11193688)}
+.game-card.orange .emoji,.game-card[data-page="typing"] .emoji{font-size:0;width:82px;height:82px;background-image:url('../assets/typing-defense-v2.svg?v=20260911')!important;background-position:center;background-size:contain;background-repeat:no-repeat;filter:drop-shadow(0 8px 6px #070d2588)}
+.world .zone.z3 span{font-size:0;width:58px;height:58px;margin:0 auto 7px;background:url('../assets/typing-defense-v2.svg?v=20260911') center/contain no-repeat;filter:drop-shadow(0 7px 5px #11193688)}
