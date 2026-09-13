@@ -30,19 +30,20 @@
   };
   window.ProfileCode = {
     showPinEditor() {
-      if (Player.data.profilePin) {
-        const language = Player.data.settings.language || 'en';
-        const promptText = language === 'fr' ? 'Entre ton ancien PIN :' : language === 'ar' ? 'أدخل رقم PIN القديم:' : 'Enter your old PIN:';
-        if (window.prompt(promptText) !== Player.data.profilePin) {
-          Rewards.toast(language === 'fr' ? 'Ancien PIN incorrect.' : language === 'ar' ? 'رقم PIN القديم غير صحيح.' : 'Incorrect old PIN.');
-          return;
-        }
-      }
       pinChangeAuthorized = true;
       const form = document.querySelector('#profile-pin-form');
       const input = document.querySelector('#profile-pin-input');
       if (form) form.hidden = false;
       input?.focus();
+    },
+    changePin() {
+      const language = Player.data.settings.language || 'en';
+      const promptText = language === 'fr' ? 'Entre ton ancien PIN :' : language === 'ar' ? 'أدخل رقم PIN القديم:' : 'Enter your old PIN:';
+      if (window.prompt(promptText) !== String(Player.data.profilePin || '')) {
+        Rewards.toast(language === 'fr' ? 'Ancien PIN incorrect.' : language === 'ar' ? 'رقم PIN القديم غير صحيح.' : 'Incorrect old PIN.');
+        return;
+      }
+      this.showPinEditor();
     },
     savePin(event) {
       event.preventDefault();
@@ -111,7 +112,8 @@
     }[language] || [];
     const [title, help, create, change, save, placeholder] = labels;
     const action = Player.data.profilePin ? change : create;
-    const section = `<div class="setting profile-pin-setting"><div><b>🔒 ${title}</b><div class="muted">${help}</div></div><button class="btn gold" type="button" onclick="ProfileCode.showPinEditor()">${action}</button><form id="profile-pin-form" class="profile-code-row" hidden onsubmit="ProfileCode.savePin(event)"><input id="profile-pin-input" class="text-input" type="password" inputmode="numeric" pattern="[0-9]{4,8}" minlength="4" maxlength="8" autocomplete="new-password" placeholder="${placeholder}"><button class="btn green" type="submit">${save}</button></form></div>`;
+    const pinAction = Player.data.profilePin ? 'ProfileCode.changePin()' : 'ProfileCode.showPinEditor()';
+    const section = `<div class="setting profile-pin-setting"><div><b>🔒 ${title}</b><div class="muted">${help}</div></div><button class="btn gold" type="button" onclick="${pinAction}">${action}</button><form id="profile-pin-form" class="profile-code-row" hidden onsubmit="ProfileCode.savePin(event)"><input id="profile-pin-input" class="text-input" type="password" inputmode="numeric" pattern="[0-9]{4,8}" minlength="4" maxlength="8" autocomplete="new-password" placeholder="${placeholder}"><button class="btn green" type="submit">${save}</button></form></div>`;
     const close = html.lastIndexOf('</section>');
     return close < 0 ? html : html.slice(0, close) + section + html.slice(close);
   };
