@@ -22,6 +22,7 @@
     return JSON.parse(new TextDecoder().decode(bytes));
   };
   const readProfiles = () => { try { return JSON.parse(localStorage.getItem(PROFILES_KEY) || '{}'); } catch (_) { return {}; } };
+  let pinChangeAuthorized = false;
   const copy = async text => {
     try { await navigator.clipboard.writeText(text); }
     catch (_) { const input = document.querySelector('#profile-code-output'); input?.focus(); input?.select(); document.execCommand('copy'); }
@@ -29,6 +30,15 @@
   };
   window.ProfileCode = {
     showPinEditor() {
+      if (Player.data.profilePin) {
+        const language = Player.data.settings.language || 'en';
+        const promptText = language === 'fr' ? 'Entre ton ancien PIN :' : language === 'ar' ? 'أدخل رقم PIN القديم:' : 'Enter your old PIN:';
+        if (window.prompt(promptText) !== Player.data.profilePin) {
+          Rewards.toast(language === 'fr' ? 'Ancien PIN incorrect.' : language === 'ar' ? 'رقم PIN القديم غير صحيح.' : 'Incorrect old PIN.');
+          return;
+        }
+      }
+      pinChangeAuthorized = true;
       const form = document.querySelector('#profile-pin-form');
       const input = document.querySelector('#profile-pin-input');
       if (form) form.hidden = false;
@@ -39,7 +49,9 @@
       const input = document.querySelector('#profile-pin-input');
       const pin = String(input?.value || '').replace(/\D/g, '');
       if (pin && (pin.length < 4 || pin.length > 8)) { Rewards.toast('Use a PIN with 4 to 8 numbers.'); return; }
+      if (Player.data.profilePin && !pinChangeAuthorized) { Rewards.toast('Enter your old PIN before choosing a new one.'); return; }
       Player.data.profilePin = pin;
+      pinChangeAuthorized = false;
       Player.save();
       if (input) input.value = '';
       Rewards.toast(pin ? 'Profile PIN saved.' : 'Profile PIN removed.');
