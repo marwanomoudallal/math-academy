@@ -89,7 +89,8 @@
 
   const originalSettings = App.settings.bind(App);
   App.settings = function settingsWithProfileCode() {
-    const html = originalSettings();
+    // Remove the previous export/import block if an older cached wrapper is still present.
+    const html = originalSettings().replace(/<div class="setting profile-code-setting">[\s\S]*?<\/div>\s*(?=<div class="setting|<\/section>)/, '');
     const language = Player.data.settings.language || 'en';
     const labels = {
       en: ['Profile PIN', 'Create a PIN to enter this profile on this device.', 'Create PIN', 'Change PIN', 'Save PIN', 'Numeric PIN'],
