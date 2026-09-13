@@ -45,6 +45,19 @@
       }
       this.showPinEditor();
     },
+    deletePin() {
+      const language = Player.data.settings.language || 'en';
+      const promptText = language === 'fr' ? 'Entre ton PIN actuel pour le supprimer :' : language === 'ar' ? 'أدخل رقم PIN الحالي لحذفه:' : 'Enter your current PIN to delete it:';
+      if (window.prompt(promptText) !== String(Player.data.profilePin || '')) {
+        Rewards.toast(language === 'fr' ? 'PIN incorrect. Le PIN n’a pas été supprimé.' : language === 'ar' ? 'رقم PIN غير صحيح. لم يتم حذفه.' : 'Incorrect PIN. Your PIN was not deleted.');
+        return;
+      }
+      if (!window.confirm(language === 'fr' ? 'Supprimer la protection PIN ?' : language === 'ar' ? 'هل تريد حذف حماية PIN؟' : 'Delete PIN protection?')) return;
+      Player.data.profilePin = '';
+      Player.save();
+      Rewards.toast(language === 'fr' ? 'PIN supprimé.' : language === 'ar' ? 'تم حذف PIN.' : 'PIN deleted.');
+      App.render();
+    },
     savePin(event) {
       event.preventDefault();
       const input = document.querySelector('#profile-pin-input');
@@ -106,14 +119,15 @@
     const html = originalSettings().replace(/<div class="setting profile-code-setting">[\s\S]*?<\/div>\s*(?=<div class="setting|<\/section>)/, '');
     const language = Player.data.settings.language || 'en';
     const labels = {
-      en: ['Profile PIN', 'Create a PIN to enter this profile on this device.', 'Create PIN', 'Change PIN', 'Save PIN', 'Numeric PIN'],
-      fr: ['PIN du profil', 'Crée un PIN pour entrer dans ce profil sur cet appareil.', 'Créer un PIN', 'Modifier le PIN', 'Enregistrer', 'PIN numérique'],
-      ar: ['رقم PIN للملف', 'أنشئ رقم PIN للدخول إلى هذا الملف على هذا الجهاز.', 'إنشاء PIN', 'تغيير PIN', 'حفظ PIN', 'PIN رقمي']
+      en: ['Profile PIN', 'Create a PIN to enter this profile on this device.', 'Create PIN', 'Change PIN', 'Delete PIN', 'Save PIN', 'Numeric PIN'],
+      fr: ['PIN du profil', 'Crée un PIN pour entrer dans ce profil sur cet appareil.', 'Créer un PIN', 'Modifier le PIN', 'Supprimer le PIN', 'Enregistrer', 'PIN numérique'],
+      ar: ['رقم PIN للملف', 'أنشئ رقم PIN للدخول إلى هذا الملف على هذا الجهاز.', 'إنشاء PIN', 'تغيير PIN', 'حذف PIN', 'حفظ PIN', 'PIN رقمي']
     }[language] || [];
-    const [title, help, create, change, save, placeholder] = labels;
+    const [title, help, create, change, remove, save, placeholder] = labels;
     const action = Player.data.profilePin ? change : create;
     const pinAction = Player.data.profilePin ? 'ProfileCode.changePin()' : 'ProfileCode.showPinEditor()';
-    const section = `<div class="setting profile-pin-setting"><div><b>🔒 ${title}</b><div class="muted">${help}</div></div><button class="btn gold" type="button" onclick="${pinAction}">${action}</button><form id="profile-pin-form" class="profile-code-row" hidden onsubmit="ProfileCode.savePin(event)"><input id="profile-pin-input" class="text-input" type="password" inputmode="numeric" pattern="[0-9]{4,8}" minlength="4" maxlength="8" autocomplete="new-password" placeholder="${placeholder}"><button class="btn green" type="submit">${save}</button></form></div>`;
+    const deleteButton = Player.data.profilePin ? `<button class="btn red" type="button" onclick="ProfileCode.deletePin()">${remove}</button>` : '';
+    const section = `<div class="setting profile-pin-setting"><div><b>🔒 ${title}</b><div class="muted">${help}</div></div><div class="profile-pin-actions"><button class="btn gold" type="button" onclick="${pinAction}">${action}</button>${deleteButton}</div><form id="profile-pin-form" class="profile-code-row" hidden onsubmit="ProfileCode.savePin(event)"><input id="profile-pin-input" class="text-input" type="password" inputmode="numeric" pattern="[0-9]{4,8}" minlength="4" maxlength="8" autocomplete="new-password" placeholder="${placeholder}"><button class="btn green" type="submit">${save}</button></form></div>`;
     const close = html.lastIndexOf('</section>');
     return close < 0 ? html : html.slice(0, close) + section + html.slice(close);
   };
