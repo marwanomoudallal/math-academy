@@ -124,7 +124,7 @@
       ar: ['رقم PIN للملف', 'أنشئ رقم PIN للدخول إلى هذا الملف على هذا الجهاز.', 'إنشاء PIN', 'تغيير PIN', 'حذف PIN', 'حفظ PIN', 'PIN رقمي']
     }[language] || [];
     const [title, help, create, change, remove, save, placeholder] = labels;
-    const action = Player.data.profilePin ? change : create;
+    const action = change;
     const pinAction = Player.data.profilePin ? 'ProfileCode.changePin()' : 'ProfileCode.showPinEditor()';
     const deleteButton = Player.data.profilePin ? `<button class="btn red" type="button" onclick="ProfileCode.deletePin()">${remove}</button>` : '';
     const section = `<div class="setting profile-pin-setting"><div><b>🔒 ${title}</b><div class="muted">${help}</div></div><div class="profile-pin-actions"><button class="btn gold" type="button" onclick="${pinAction}">${action}</button>${deleteButton}</div><form id="profile-pin-form" class="profile-code-row" hidden onsubmit="ProfileCode.savePin(event)"><input id="profile-pin-input" class="text-input" type="password" inputmode="numeric" pattern="[0-9]{4,8}" minlength="4" maxlength="8" autocomplete="new-password" placeholder="${placeholder}"><button class="btn green" type="submit">${save}</button></form></div>`;
