@@ -28,6 +28,12 @@
     Rewards.toast('Profile code copied to clipboard.');
   };
   window.ProfileCode = {
+    showPinEditor() {
+      const form = document.querySelector('#profile-pin-form');
+      const input = document.querySelector('#profile-pin-input');
+      if (form) form.hidden = false;
+      input?.focus();
+    },
     savePin(event) {
       event.preventDefault();
       const input = document.querySelector('#profile-pin-input');
@@ -86,12 +92,13 @@
     const html = originalSettings();
     const language = Player.data.settings.language || 'en';
     const labels = {
-      en: ['Profile Code', 'Generate a code to move this profile to another device.', 'Generate Code', 'Enter a profile code to restore progress on this device.', 'Import Code', 'Profile code', 'Profile PIN', 'Set a 4–8 digit PIN to protect this profile when switching accounts.', 'Save PIN', 'Numeric PIN'],
-      fr: ['Code du profil', 'Génère un code pour déplacer ce profil sur un autre appareil.', 'Générer le code', 'Saisis un code pour restaurer la progression sur cet appareil.', 'Importer le code', 'Code du profil', 'PIN du profil', 'Définis un PIN de 4 à 8 chiffres pour protéger ce profil.', 'Enregistrer le PIN', 'PIN numérique'],
-      ar: ['رمز الملف الشخصي', 'أنشئ رمزًا لنقل هذا الملف إلى جهاز آخر.', 'إنشاء الرمز', 'أدخل رمز الملف لاستعادة التقدم على هذا الجهاز.', 'استيراد الرمز', 'رمز الملف الشخصي', 'رقم PIN للملف', 'عيّن رقمًا من 4 إلى 8 أرقام لحماية الملف عند تبديل الحسابات.', 'حفظ PIN', 'PIN رقمي']
+      en: ['Profile PIN', 'Create a PIN to enter this profile on this device.', 'Create PIN', 'Change PIN', 'Save PIN', 'Numeric PIN'],
+      fr: ['PIN du profil', 'Crée un PIN pour entrer dans ce profil sur cet appareil.', 'Créer un PIN', 'Modifier le PIN', 'Enregistrer', 'PIN numérique'],
+      ar: ['رقم PIN للملف', 'أنشئ رقم PIN للدخول إلى هذا الملف على هذا الجهاز.', 'إنشاء PIN', 'تغيير PIN', 'حفظ PIN', 'PIN رقمي']
     }[language] || [];
-    const [title, help, generate, importHelp, importLabel, placeholder, pinTitle, pinHelp, pinSave, pinPlaceholder] = labels;
-    const section = `<div class="setting profile-code-setting"><div><b>▣ ${title}</b><div class="muted">${help}</div></div><div class="profile-code-row"><input id="profile-code-output" class="text-input" readonly aria-label="${placeholder}"><button class="btn gold" type="button" onclick="ProfileCode.generate()">${generate}</button></div><div class="muted">${importHelp}</div><form class="profile-code-row" onsubmit="ProfileCode.import(event)"><input id="profile-code-input" class="text-input" autocomplete="off" placeholder="${placeholder}" required><button class="btn green" type="submit">${importLabel}</button></form><div class="profile-pin-block"><b>${pinTitle}</b><div class="muted">${pinHelp}</div><form class="profile-code-row" onsubmit="ProfileCode.savePin(event)"><input id="profile-pin-input" class="text-input" type="password" inputmode="numeric" pattern="[0-9]{4,8}" minlength="4" maxlength="8" autocomplete="new-password" placeholder="${pinPlaceholder}"><button class="btn green" type="submit">${pinSave}</button></form></div></div>`;
+    const [title, help, create, change, save, placeholder] = labels;
+    const action = Player.data.profilePin ? change : create;
+    const section = `<div class="setting profile-pin-setting"><div><b>🔒 ${title}</b><div class="muted">${help}</div></div><button class="btn gold" type="button" onclick="ProfileCode.showPinEditor()">${action}</button><form id="profile-pin-form" class="profile-code-row" hidden onsubmit="ProfileCode.savePin(event)"><input id="profile-pin-input" class="text-input" type="password" inputmode="numeric" pattern="[0-9]{4,8}" minlength="4" maxlength="8" autocomplete="new-password" placeholder="${placeholder}"><button class="btn green" type="submit">${save}</button></form></div>`;
     const close = html.lastIndexOf('</section>');
     return close < 0 ? html : html.slice(0, close) + section + html.slice(close);
   };
