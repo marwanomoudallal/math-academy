@@ -59,7 +59,9 @@
       pinChangeAuthorized = true;
       const form = document.querySelector('#profile-pin-form');
       const input = document.querySelector('#profile-pin-input');
+      const actions = document.querySelector('#profile-pin-actions');
       if (form) form.hidden = false;
+      if (actions) actions.hidden = true;
       input?.focus();
     },
     togglePin(id, button) {
@@ -102,6 +104,10 @@
       pinChangeAuthorized = false;
       Player.save();
       if (input) input.value = '';
+      const form = document.querySelector('#profile-pin-form');
+      const actions = document.querySelector('#profile-pin-actions');
+      if (form) form.hidden = true;
+      if (actions) actions.hidden = false;
       Rewards.toast(pin ? 'Profile PIN saved.' : 'Profile PIN removed.');
     },
     generate() {
@@ -161,7 +167,7 @@
     const action = change;
     const pinAction = Player.data.profilePin ? 'ProfileCode.changePin()' : 'ProfileCode.showPinEditor()';
     const deleteButton = Player.data.profilePin ? `<button class="btn red" type="button" onclick="ProfileCode.deletePin()">${remove}</button>` : '';
-    const section = `<div class="setting profile-pin-setting"><div><b>🔒 ${title}</b><div class="muted">${help}</div></div><div class="profile-pin-actions"><button class="btn gold" type="button" onclick="${pinAction}">${action}</button>${deleteButton}</div><form id="profile-pin-form" class="profile-code-row" hidden onsubmit="ProfileCode.savePin(event)"><div class="pin-input-wrap"><input id="profile-pin-input" class="text-input" type="password" inputmode="numeric" pattern="[0-9]{4,8}" minlength="4" maxlength="8" autocomplete="new-password" placeholder="${placeholder}"><button class="pin-toggle" type="button" onclick="ProfileCode.togglePin('profile-pin-input', this)" aria-label="Show PIN">Show</button></div><button class="btn green" type="submit">${save}</button></form></div>`;
+    const section = `<div class="setting profile-pin-setting"><div><b>🔒 ${title}</b><div class="muted">${help}</div></div><div id="profile-pin-actions" class="profile-pin-actions"><button class="btn gold" type="button" onclick="${pinAction}">${action}</button>${deleteButton}</div><form id="profile-pin-form" class="profile-code-row" hidden onsubmit="ProfileCode.savePin(event)"><div class="pin-input-wrap"><input id="profile-pin-input" class="text-input" type="password" inputmode="numeric" pattern="[0-9]{4,8}" minlength="4" maxlength="8" autocomplete="new-password" placeholder="${placeholder}"><button class="pin-toggle" type="button" onclick="ProfileCode.togglePin('profile-pin-input', this)" aria-label="Show PIN">Show</button></div><button class="btn green" type="submit">${save}</button></form></div>`;
     const close = html.lastIndexOf('</section>');
     return close < 0 ? html : html.slice(0, close) + section + html.slice(close);
   };
