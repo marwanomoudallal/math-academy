@@ -102,7 +102,7 @@
       if (output) { output.value = code; output.focus(); output.select(); }
       copy(code);
     },
-    import(event) {
+    async import(event) {
       event.preventDefault();
       let payload;
       try { payload = decode(document.querySelector('#profile-code-input')?.value); }
