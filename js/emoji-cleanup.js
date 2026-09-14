@@ -11,6 +11,14 @@
       const value = text.nodeValue.replace(emoji, '').replace(/ {2,}/g, ' ');
       if (value !== text.nodeValue) text.nodeValue = value;
     });
+    const cards = [];
+    if (root.matches?.('.expansion-card')) cards.push(root);
+    root.querySelectorAll?.('.expansion-card').forEach(card => cards.push(card));
+    cards.forEach(card => {
+      const art = {story:'quest-story-art.svg',inventory:'inventory-backpack-art.svg','pet-book':'pet-collection-art.svg','math-training':'math-training-art.svg'}[card.dataset.page];
+      const icon = card.querySelector('.emoji');
+      if (art && icon) { icon.style.backgroundImage = `url("assets/${art}")`; icon.style.backgroundSize = 'contain'; icon.style.backgroundRepeat = 'no-repeat'; }
+    });
   };
   clean(document.body);
   new MutationObserver(records => records.forEach(record => record.addedNodes.forEach(node => {
