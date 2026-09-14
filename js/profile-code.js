@@ -26,11 +26,18 @@
   const askPin = message => new Promise(resolve => {
     const overlay = document.createElement('div');
     overlay.className = 'profile-dialog-backdrop';
-    overlay.innerHTML = `<form class="profile-dialog card"><div class="profile-dialog-icon">🔒</div><h2>Profile PIN</h2><p>${message}</p><input class="text-input" type="password" inputmode="numeric" maxlength="8" autocomplete="one-time-code" autofocus required><div class="profile-dialog-actions"><button class="btn ghost" type="button" data-cancel>Cancel</button><button class="btn gold" type="submit">Continue</button></div></form>`;
+    overlay.innerHTML = `<form class="profile-dialog card"><div class="profile-dialog-icon">🔒</div><h2>Profile PIN</h2><p>${message}</p><div class="pin-input-wrap"><input class="text-input" type="password" inputmode="numeric" maxlength="8" autocomplete="one-time-code" autofocus required><button class="pin-toggle" type="button" aria-label="Show PIN">Show</button></div><div class="profile-dialog-actions"><button class="btn ghost" type="button" data-cancel>Cancel</button><button class="btn gold" type="submit">Continue</button></div></form>`;
     document.body.append(overlay);
     const close = value => { overlay.remove(); resolve(value); };
     overlay.querySelector('form').addEventListener('submit', event => { event.preventDefault(); close(overlay.querySelector('input').value); });
     overlay.querySelector('[data-cancel]').addEventListener('click', () => close(null));
+    overlay.querySelector('.pin-toggle').addEventListener('click', event => {
+      const input = overlay.querySelector('input');
+      const visible = input.type === 'text';
+      input.type = visible ? 'password' : 'text';
+      event.currentTarget.textContent = visible ? 'Show' : 'Hide';
+      event.currentTarget.setAttribute('aria-label', visible ? 'Show PIN' : 'Hide PIN');
+    });
     overlay.querySelector('input').focus();
   });
   const askConfirm = message => new Promise(resolve => {
