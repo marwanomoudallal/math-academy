@@ -19,6 +19,13 @@
       const icon = card.querySelector('.emoji');
       if (art && icon) { icon.style.backgroundImage = `url("assets/${art}")`; icon.style.backgroundSize = 'contain'; icon.style.backgroundRepeat = 'no-repeat'; }
     });
+    const themed = (selector, art) => root.querySelectorAll?.(selector).forEach(el => {
+      el.style.fontSize = '0'; el.style.display = 'block'; el.style.width = '74px'; el.style.height = '74px';
+      el.style.margin = '0 auto 8px'; el.style.background = `url("assets/${art}") center/contain no-repeat`;
+    });
+    themed('.shop-item .emoji', 'inventory-backpack-art.svg');
+    themed('.wardrobe-item > span', 'math-training-art.svg');
+    themed('.pet-book-card .emoji', 'pet-collection-art.svg');
   };
   clean(document.body);
   new MutationObserver(records => records.forEach(record => record.addedNodes.forEach(node => {
