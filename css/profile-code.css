@@ -2,4 +2,5 @@
 .profile-pin-setting{width:100%}.profile-code-row{width:100%}
 .profile-pin-setting{display:flex;align-items:center;gap:16px;flex-wrap:nowrap}.profile-pin-setting>div:first-child{flex:1;min-width:260px}.profile-pin-actions{margin-top:0;flex-shrink:0}.profile-pin-setting .profile-code-row{flex:1;min-width:360px;margin-top:0}
 .profile-pin-setting>div:first-child{flex:1 1 280px;min-width:220px}.profile-pin-setting .profile-code-row{flex:1 1 420px;min-width:0}
+@media(max-width:600px){.profile-pin-setting>div:first-child{width:100%;min-width:0}.profile-pin-setting .profile-code-row{width:100%;min-width:0}.profile-code-row .pin-input-wrap{width:100%}}
 @media(max-width:900px){.profile-pin-setting{align-items:stretch;flex-wrap:wrap}.profile-pin-setting>div:first-child{flex-basis:100%}.profile-pin-setting .profile-code-row{min-width:0}}
