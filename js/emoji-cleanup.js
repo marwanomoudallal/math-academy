@@ -29,7 +29,12 @@
     root.querySelectorAll?.('.book-item.outfit-card > span').forEach(slot => {
       if (!window.Wardrobe?.figure || slot.classList.contains('item-character')) return;
       slot.classList.add('item-character');
-      slot.innerHTML = window.Wardrobe.figure('item-preview');
+      const category = window.Player?.data?.wardrobeCategory || 'shoes';
+      const item = slot.parentElement?.querySelector('b')?.textContent?.trim() || '';
+      const preview = {...(window.Player?.data?.outfit || {})};
+      ['costume','shirt','pants','shoes','hat','boyHair','girlHair','mask','gloves','emblem','belt','cape','glasses','wings','weapon','backpack','necklace','aura'].forEach(key => { preview[key] = ''; });
+      preview[category] = item;
+      slot.innerHTML = window.Wardrobe.figure('item-preview', preview);
     });
   };
   clean(document.body);
