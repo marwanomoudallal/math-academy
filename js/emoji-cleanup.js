@@ -26,6 +26,11 @@
     themed('.shop-item .emoji', 'inventory-backpack-art.svg');
     themed('.wardrobe-item > span', 'math-training-art.svg');
     themed('.pet-book-card .emoji', 'pet-collection-art.svg');
+    root.querySelectorAll?.('.book-item.outfit-card > span').forEach(slot => {
+      if (!window.Wardrobe?.figure || slot.classList.contains('item-character')) return;
+      slot.classList.add('item-character');
+      slot.innerHTML = window.Wardrobe.figure('item-preview');
+    });
   };
   clean(document.body);
   new MutationObserver(records => records.forEach(record => record.addedNodes.forEach(node => {
