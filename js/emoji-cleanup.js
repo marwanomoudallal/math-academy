@@ -31,15 +31,44 @@
       slot.classList.add('item-character');
       const category = window.Player?.data?.wardrobeCategory || 'shoes';
       const item = slot.parentElement?.querySelector('b')?.textContent?.trim() || '';
-      const preview = {...(window.Player?.data?.outfit || {})};
-      ['costume','shirt','pants','shoes','hat','boyHair','girlHair','mask','gloves','emblem','belt','cape','glasses','wings','weapon','backpack','necklace','aura'].forEach(key => { preview[key] = ''; });
-      preview[category] = item;
-      slot.innerHTML = window.Wardrobe.figure('item-preview', preview);
+      const art = {shoes:'web-sneaker.svg',costume:'web-castle.svg',pants:'web-calculator.svg',cape:'web-rocket.svg',backpack:'web-backpack.svg',pets:'web-paw.svg'}[category] || 'web-pencil.svg';
+      slot.innerHTML = '';
+      slot.style.backgroundImage = `url("assets/${art}")`;
+      slot.style.backgroundPosition = 'center';
+      slot.style.backgroundSize = 'contain';
+      slot.style.backgroundRepeat = 'no-repeat';
     });
   };
+  const clarifyHud = () => {
+    const stats = document.querySelector('.top-stats');
+    if (!stats) return;
+    const xp = document.getElementById('xp');
+    const coins = document.getElementById('coins');
+    const gems = document.getElementById('gems');
+    const setStat = (selector, label, value) => {
+      const pill = stats.querySelector(selector);
+      if (!pill || !value) return;
+      if (pill.classList.contains('clear-stat')) return;
+      pill.classList.add('clear-stat');
+      pill.innerHTML = `<span class="stat-label">${label}</span><b id="${value.id}">${value.textContent || '0'}</b>`;
+      pill.setAttribute('aria-label', label);
+    };
+    setStat('.pill:nth-child(1)', 'XP', xp);
+    setStat('.pill:nth-child(2)', 'Coins', coins);
+    setStat('.pill:nth-child(3)', 'Gems', gems);
+    const settings = stats.querySelector('.icon-btn');
+    if (settings && !settings.classList.contains('settings-btn')) {
+      settings.classList.add('settings-btn');
+      settings.textContent = 'Settings';
+      settings.title = 'Settings';
+      settings.setAttribute('aria-label', 'Settings');
+    }
+  };
+  clarifyHud();
   clean(document.body);
   new MutationObserver(records => records.forEach(record => record.addedNodes.forEach(node => {
     if (node.nodeType === Node.ELEMENT_NODE) clean(node);
     else if (node.nodeType === Node.TEXT_NODE) node.nodeValue = node.nodeValue.replace(emoji, '');
   }))).observe(document.body, {childList:true, subtree:true});
+  new MutationObserver(clarifyHud).observe(document.querySelector('.topbar') || document.body, {childList:true, subtree:true});
 })();
