@@ -1,0 +1,92 @@
+/* Illustrated item thumbnails: each card shows a small body wearing the item. */
+.outfit-card > span {
+  position: relative;
+  display: block;
+  width: 64px;
+  height: 96px;
+  font-size: 0;
+  color: transparent;
+  overflow: hidden;
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 50% 18%, var(--preview-skin, #f2dcca) 0 12px, transparent 13px),
+    linear-gradient(var(--preview-top, #42a5f5), var(--preview-top, #42a5f5)) 50% 34px / 25px 30px no-repeat,
+    linear-gradient(var(--preview-skin, #f2dcca), var(--preview-skin, #f2dcca)) 34% 36px / 8px 31px no-repeat,
+    linear-gradient(var(--preview-skin, #f2dcca), var(--preview-skin, #f2dcca)) 66% 36px / 8px 31px no-repeat,
+    linear-gradient(var(--preview-bottom, #ffb74d), var(--preview-bottom, #ffb74d)) 43% 62px / 10px 25px no-repeat,
+    linear-gradient(var(--preview-bottom, #ffb74d), var(--preview-bottom, #ffb74d)) 57% 62px / 10px 25px no-repeat,
+    linear-gradient(var(--preview-shoe, #e53935), var(--preview-shoe, #e53935)) 39% 87px / 15px 6px no-repeat,
+    linear-gradient(var(--preview-shoe, #e53935), var(--preview-shoe, #e53935)) 61% 87px / 15px 6px no-repeat;
+  filter: drop-shadow(0 2px 2px #0003);
+}
+.outfit-card > span::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 29px;
+  width: 24px;
+  height: 8px;
+  border-radius: 8px;
+  background: var(--preview-detail, transparent);
+  z-index: 2;
+}
+.outfit-card > span::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 9px;
+  width: 32px;
+  height: 7px;
+  border-radius: 8px;
+  background: var(--preview-head, transparent);
+  z-index: 3;
+}
+
+/* Outfit-specific colors. */
+.outfit-sky-t-shirt > span { --preview-top:#42a5f5; }
+.outfit-forest-hoodie > span { --preview-top:#43a047; --preview-detail:#1b5e20; }
+.outfit-galaxy-jacket > span { --preview-top:#673ab7; --preview-detail:#ce93d8; }
+.outfit-hero-suit > span { --preview-top:#d32f2f; --preview-detail:#ffd54f; }
+.outfit-ninja-suit > span { --preview-top:#263238; --preview-detail:#90a4ae; }
+.outfit-knight-armor > span { --preview-top:#78909c; --preview-detail:#eceff1; }
+.outfit-explorer-shirt > span { --preview-top:#ef6c00; }
+.outfit-space-suit > span { --preview-top:#eceff1; --preview-detail:#42a5f5; }
+.outfit-dragon-armor > span { --preview-top:#2e7d32; --preview-detail:#fbc02d; }
+.outfit-wizard-robe > span { --preview-top:#512da8; --preview-detail:#ffd54f; }
+.outfit-academy-uniform > span { --preview-top:#3949ab; --preview-detail:#fff; }
+.outfit-sports-star > span { --preview-top:#ec407a; --preview-detail:#fff; }
+.outfit-super-girl-suit > span { --preview-top:#d81b60; --preview-detail:#ffd54f; }
+.outfit-moon-knight-armor > span { --preview-top:#7986cb; --preview-detail:#fff; }
+.outfit-forest-ranger > span { --preview-top:#43a047; --preview-detail:#8bc34a; }
+.outfit-crystal-princess > span { --preview-top:#7e57c2; --preview-detail:#80deea; }
+.outfit-galaxy-explorer > span { --preview-top:#5c6bc0; --preview-detail:#ce93d8; }
+.outfit-dragon-rider > span { --preview-top:#00897b; --preview-detail:#ffca28; }
+.outfit-magic-academy > span { --preview-top:#8e24aa; --preview-detail:#ffd54f; }
+.outfit-phoenix-guardian > span { --preview-top:#f4511e; --preview-detail:#ffeb3b; }
+
+/* Standalone clothing previews still show the complete figure. */
+.outfit-adventure-shorts > span,
+.outfit-sport-shorts > span { --preview-bottom:#e53935; }
+.outfit-knight-pants > span,
+.outfit-ninja-pants > span { --preview-bottom:#455a64; }
+.outfit-blue-jeans > span { --preview-bottom:#1565c0; }
+.outfit-explorer-pants > span { --preview-bottom:#6d4c41; }
+.outfit-snow-pants > span { --preview-bottom:#90caf9; }
+.outfit-space-pants > span { --preview-bottom:#eceff1; }
+.outfit-dragon-pants > span { --preview-bottom:#2e7d32; }
+.outfit-royal-pants > span { --preview-bottom:#6a1b9a; }
+.outfit-red-sneakers > span { --preview-shoe:#e53935; }
+.outfit-star-boots > span { --preview-shoe:#fbc02d; }
+.outfit-blue-trainers > span { --preview-shoe:#1976d2; }
+.outfit-green-runners > span { --preview-shoe:#43a047; }
+.outfit-golden-shoes > span { --preview-shoe:#f9a825; }
+.outfit-robot-mask > span::after { --preview-head:#263238; box-shadow: inset 0 0 0 2px #90caf9; }
+.outfit-ninja-mask > span::after { --preview-head:#202633; }
+.outfit-hero-mask > span::after { --preview-head:#d32f2f; }
+.outfit-mystery-mask > span::after { --preview-head:#6a1b9a; }
+.outfit-space-mask > span::after { --preview-head:#78909c; }
+.outfit-monster-mask > span::after { --preview-head:#43a047; }
+.outfit-ghost-mask > span::after { --preview-head:#b0bec5; }
+.outfit-dragon-mask > span::after { --preview-head:#2e7d32; }
+.outfit-knight-mask > span::after { --preview-head:#78909c; }
+.outfit-alien-mask > span::after { --preview-head:#75c96b; }
