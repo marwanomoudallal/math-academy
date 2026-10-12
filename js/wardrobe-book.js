@@ -41,6 +41,7 @@
     pose:[['Ready Pose','●',0],['Champion Pose','🏆',120],['Hero Pose','⚡',160],['Power Pose','💪',200],['Magic Pose','✨',240],['Ninja Pose','🥷',280],['Flying Pose','🪽',320],['Victory Pose','✌️',360],['Royal Pose','👑',420],['Dance Pose','♫',480]]
   };
   Object.entries(customizationExtras).forEach(([category,items])=>items.forEach(item=>catalog.push([category,...item])));
+  window.WardrobeCatalog=catalog;
   pets.push(['Penguin','🐧',500],['Unicorn','🦄',800],['Panda','🐼',600],['Phoenix','🔥',950]);
   const tx={
     en:{title:'Customization',hero:'My Hero',body:'Body',face:'Face',boyHair:'Boy Hair',girlHair:'Girl Hair',mask:'Mask',shoes:'Shoes',gloves:'Gloves',emblem:'Emblems',belt:'Belt',costume:'Outfit',pants:'Shorts & Pants',cape:'Cape',pets:'Pets',buy:'Buy',wear:'Wear',on:'Wearing',back:'Home',coins:'Coins',xp:'XP'},
