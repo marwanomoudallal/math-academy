@@ -10,7 +10,7 @@
     root.querySelectorAll('.outfit-card').forEach(card => {
       const itemClass = [...card.classList].find(name => name.startsWith('outfit-') && name !== 'outfit-card');
       const item = window.WardrobeCatalog.find(entry => `outfit-${slug(entry[1])}` === itemClass);
-      const holder = card.querySelector(':scope > span');
+      const holder = [...card.children].find(child => child.tagName === 'SPAN');
       if (!item || !holder) return;
       const outfit = { ...(Player.data.outfit || {}) };
       // Clear the default outfit first so this card shows only its selected item.
