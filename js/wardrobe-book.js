@@ -48,10 +48,10 @@
     ar:{title:'تخصيص البطل',hero:'بطلي',body:'الجسم',face:'الوجه',boyHair:'شعر الأولاد',girlHair:'شعر البنات',mask:'القناع',shoes:'الأحذية',gloves:'القفازات',emblem:'الشعارات',belt:'الحزام',costume:'الزي',pants:'السراويل',cape:'العباءة',pets:'الحيوانات الأليفة',buy:'شراء',wear:'ارتداء',on:'مُرتدى',back:'الرئيسية',coins:'العملات',xp:'الخبرة'}
   };
   const language=()=>Player.data.settings.language||'en',T=()=>tx[language()]||tx.en;
-  const ensure=()=>{Player.data.outfit||={};Player.data.outfit.body||='Warm Body';Player.data.outfit.face||='Happy Face';Player.data.wardrobeCategory||='costume';['Warm Body','Happy Face'].forEach(n=>{if(!Player.data.inventory.includes(n))Player.data.inventory.push(n)})};ensure();Player.save();
+  const ensure=()=>{Player.data.outfit||={};Player.data.outfit.body||='Warm Body';Player.data.outfit.face||='Happy Face';Player.data.wardrobeCategory||='body';if(Player.data.wardrobeCategory==='costume')Player.data.wardrobeCategory='body';['Warm Body','Happy Face'].forEach(n=>{if(!Player.data.inventory.includes(n))Player.data.inventory.push(n)})};ensure();Player.save();
   const find=n=>catalog.find(x=>x[1]===n);
   const oldBuy=Wardrobe.buy.bind(Wardrobe),oldEquip=Wardrobe.equip.bind(Wardrobe);
-  Wardrobe.buy=function(n){const x=find(n);if(!x)return oldBuy(n);if(Player.data.coins<x[3])return Rewards.toast(T().coins+' ❌');Player.data.coins-=x[3];Player.data.inventory.push(n);Wardrobe.heroAnimation='celebrate';Player.save();App.render()};
+  Wardrobe.buy=function(n){const x=find(n);if(!x)return oldBuy(n);if(x[0]==='costume')return;if(Player.data.coins<x[3])return Rewards.toast(T().coins+' ❌');Player.data.coins-=x[3];Player.data.inventory.push(n);Wardrobe.heroAnimation='celebrate';Player.save();App.render()};
   Wardrobe.equip=function(n){const x=find(n);if(!x)return oldEquip(n);Player.data.outfit[x[0]]=n;if(x[0]==='background')heroView().background=n.toLowerCase().replace(/[^a-z0-9]+/g,'-');Wardrobe.heroAnimation='changing';Player.save();App.render()};
   Wardrobe.category=function(c){const menu=document.querySelector('.book-categories'),menuScroll=menu?.scrollTop||0,pageScroll=window.scrollY;Player.data.wardrobeCategory=c;Player.save();App.render();requestAnimationFrame(()=>{const nextMenu=document.querySelector('.book-categories');if(nextMenu)nextMenu.scrollTop=menuScroll;window.scrollTo(0,pageScroll)})};
   const heroView=()=>Player.data.heroView||={background:'bedroom',rotation:0,zoom:1};

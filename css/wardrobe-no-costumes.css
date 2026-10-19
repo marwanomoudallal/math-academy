@@ -1,0 +1,2 @@
+/* Costume acquisition is retired; pet collection remains available. */
+.book-categories button[onclick*="costume"] { display: none; }
