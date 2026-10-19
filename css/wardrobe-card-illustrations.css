@@ -196,6 +196,20 @@
 .outfit-shadow-cape > span { --draw-item:#202030; }
 .outfit-royal-cape > span { --draw-item:#b71c1c; }
 
+/* Emoji mode restored. */
+.outfit-card > span {
+  font-size: 55px !important;
+  color: inherit;
+  text-indent: 0;
+  background: none;
+  filter: none;
+  border-radius: 0;
+}
+.outfit-card > span::before,
+.outfit-card > span::after { display: none !important; }
+.outfit-card > span .outfit-art { display: inline; }
+.outfit-card > span .outfit-art::after { content: "👕"; font-size: 55px; }
+
 /* Outfit-specific colors. */
 .outfit-sky-t-shirt > span { --preview-top:#42a5f5; }
 .outfit-forest-hoodie > span { --preview-top:#43a047; --preview-detail:#1b5e20; }
