@@ -4,30 +4,23 @@
   display: block;
   width: 64px;
   height: 96px;
-  font-size: 0;
-  color: transparent;
+  font-size: 30px;
+  color: inherit;
   overflow: hidden;
   border-radius: 10px;
-  background:
-    radial-gradient(circle at 50% 18%, var(--preview-skin, #f2dcca) 0 12px, transparent 13px),
-    linear-gradient(var(--preview-top, #42a5f5), var(--preview-top, #42a5f5)) 50% 34px / 25px 30px no-repeat,
-    linear-gradient(var(--preview-skin, #f2dcca), var(--preview-skin, #f2dcca)) 34% 36px / 8px 31px no-repeat,
-    linear-gradient(var(--preview-skin, #f2dcca), var(--preview-skin, #f2dcca)) 66% 36px / 8px 31px no-repeat,
-    linear-gradient(var(--preview-bottom, #ffb74d), var(--preview-bottom, #ffb74d)) 43% 62px / 10px 25px no-repeat,
-    linear-gradient(var(--preview-bottom, #ffb74d), var(--preview-bottom, #ffb74d)) 57% 62px / 10px 25px no-repeat,
-    linear-gradient(var(--preview-shoe, #e53935), var(--preview-shoe, #e53935)) 39% 87px / 15px 6px no-repeat,
-    linear-gradient(var(--preview-shoe, #e53935), var(--preview-shoe, #e53935)) 61% 87px / 15px 6px no-repeat;
+  background: none;
   filter: drop-shadow(0 2px 2px #0003);
 }
 .outfit-card > span::before {
-  content: "";
+  content: "🧍";
   position: absolute;
   left: 20px;
   top: 29px;
-  width: 24px;
-  height: 8px;
-  border-radius: 8px;
-  background: var(--preview-detail, transparent);
+  width: 52px;
+  height: 58px;
+  font-size: 52px;
+  line-height: 1;
+  background: none;
   z-index: 2;
 }
 .outfit-card > span::after {
@@ -41,6 +34,7 @@
   background: var(--preview-head, transparent);
   z-index: 3;
 }
+.outfit-card > span .outfit-art::after { content: "👕"; font-size: 30px; }
 
 /* Outfit-specific colors. */
 .outfit-sky-t-shirt > span { --preview-top:#42a5f5; }
