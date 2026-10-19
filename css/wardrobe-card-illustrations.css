@@ -149,10 +149,14 @@
   width: 64px;
   height: 96px;
   border: 0;
-  border-radius: 0;
+  border-radius: 16px;
+  filter: drop-shadow(0 3px 2px #17304a44);
   background:
+    radial-gradient(circle at 44% 17%, #4a382f 0 2px, transparent 3px),
+    radial-gradient(circle at 56% 17%, #4a382f 0 2px, transparent 3px),
+    radial-gradient(ellipse at 50% 23%, #d88378 0 2px, transparent 3px),
     radial-gradient(ellipse at 50% 17%, #f2dcca 0 12px, transparent 13px),
-    linear-gradient(var(--draw-item, var(--preview-top, #42a5f5)), var(--draw-item, var(--preview-top, #42a5f5))) 50% 34px / 28px 32px no-repeat,
+    linear-gradient(135deg, color-mix(in srgb, var(--draw-item, #42a5f5), #fff 18%), var(--draw-item, #42a5f5) 55%, color-mix(in srgb, var(--draw-item, #42a5f5), #000 18%)) 50% 34px / 28px 32px no-repeat,
     linear-gradient(#f2dcca, #f2dcca) 34% 38px / 8px 33px no-repeat,
     linear-gradient(#f2dcca, #f2dcca) 66% 38px / 8px 33px no-repeat,
     linear-gradient(#f2dcca, #f2dcca) 43% 66px / 10px 26px no-repeat,
