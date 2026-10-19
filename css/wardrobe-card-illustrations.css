@@ -166,6 +166,16 @@
 }
 .outfit-card > span::after { display: none !important; }
 .outfit-card > span .outfit-art { display: none; }
+.outfit-boy-hero > span { --draw-item:#42a5f5; }
+.outfit-girl-hero > span { --draw-item:#f48fb1; }
+.outfit-warm-body > span { --draw-item:#efb08e; }
+.outfit-golden-body > span { --draw-item:#c98656; }
+.outfit-bronze-body > span { --draw-item:#ad7145; }
+.outfit-cocoa-body > span { --draw-item:#825033; }
+.outfit-moon-body > span { --draw-item:#d9c3b1; }
+.outfit-sunset-body > span { --draw-item:#d99a72; }
+.outfit-ocean-body > span { --draw-item:#75b9c7; }
+.outfit-alien-body > span { --draw-item:#75c96b; }
 .outfit-ninja-mask > span,.outfit-ninja-suit > span { --draw-item:#29233d; }
 .outfit-robot-mask > span { --draw-item:#78909c; }
 .outfit-hero-mask > span,.outfit-hero-suit > span { --draw-item:#d32f2f; }
