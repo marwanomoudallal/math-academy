@@ -27,14 +27,51 @@
   content: "";
   position: absolute;
   left: 16px;
-  top: 9px;
+  top: 27px;
   width: 32px;
-  height: 7px;
-  border-radius: 8px;
-  background: var(--preview-head, transparent);
+  height: 32px;
+  font-size: 28px;
+  line-height: 1;
+  text-align: center;
+  background: none;
   z-index: 3;
 }
 .outfit-card > span .outfit-art::after { content: "👕"; font-size: 30px; }
+
+/* The selected item is the only overlay on the simple body. */
+.outfit-boy-hero > span::after { content: "👦"; }
+.outfit-girl-hero > span::after { content: "👧"; }
+.outfit-warm-body > span::after { content: "🧍"; }
+.outfit-golden-body > span::after { content: "🧍🏾"; }
+.outfit-bronze-body > span::after { content: "🧍🏽"; }
+.outfit-cocoa-body > span::after { content: "🧍🏿"; }
+.outfit-moon-body > span::after { content: "🧍🏻"; }
+.outfit-sunset-body > span::after { content: "🧍🏽"; }
+.outfit-ocean-body > span::after { content: "🧍"; }
+.outfit-alien-body > span::after { content: "👽"; }
+.outfit-ninja-mask > span::after { content: "🥷"; }
+.outfit-robot-mask > span::after { content: "🤖"; }
+.outfit-hero-mask > span::after { content: "🦸"; }
+.outfit-mystery-mask > span::after { content: "🎭"; }
+.outfit-space-mask > span::after { content: "🧑‍🚀"; }
+.outfit-monster-mask > span::after { content: "👹"; }
+.outfit-ghost-mask > span::after { content: "👻"; }
+.outfit-dragon-mask > span::after { content: "🐲"; }
+.outfit-red-sneakers > span::after { content: "👟"; }
+.outfit-star-boots > span::after { content: "🥾"; }
+.outfit-blue-trainers > span::after { content: "👟"; }
+.outfit-green-runners > span::after { content: "👟"; }
+.outfit-golden-shoes > span::after { content: "👞"; }
+.outfit-sky-t-shirt > span::after { content: "👕"; }
+.outfit-forest-hoodie > span::after { content: "🧥"; }
+.outfit-galaxy-jacket > span::after { content: "🧥"; }
+.outfit-hero-suit > span::after { content: "🦸"; }
+.outfit-ninja-suit > span::after { content: "🥷"; }
+.outfit-knight-armor > span::after { content: "🛡️"; }
+.outfit-adventure-shorts > span::after { content: "🩳"; }
+.outfit-knight-pants > span::after { content: "👖"; }
+.outfit-shadow-cape > span::after { content: "🦸"; }
+.outfit-royal-cape > span::after { content: "🦸"; }
 
 /* Outfit-specific colors. */
 .outfit-sky-t-shirt > span { --preview-top:#42a5f5; }
