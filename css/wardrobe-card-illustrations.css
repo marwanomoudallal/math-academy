@@ -137,6 +137,51 @@
 .outfit-shadow-cape > span::after { --draw-item:#202030; --draw-shape:polygon(0 0,100% 0,82% 100%,50% 78%,18% 100%); }
 .outfit-royal-cape > span::after { --draw-item:#b71c1c; --draw-shape:polygon(0 0,100% 0,82% 100%,50% 78%,18% 100%); }
 
+/* One figure only: the item is drawn into the body instead of layered as a second icon. */
+.outfit-card > span {
+  font-size: 0 !important;
+  text-indent: -9999px;
+}
+.outfit-card > span::before {
+  content: "";
+  left: 0;
+  top: 0;
+  width: 64px;
+  height: 96px;
+  border: 0;
+  border-radius: 0;
+  background:
+    radial-gradient(ellipse at 50% 17%, #f2dcca 0 12px, transparent 13px),
+    linear-gradient(var(--draw-item, var(--preview-top, #42a5f5)), var(--draw-item, var(--preview-top, #42a5f5))) 50% 34px / 28px 32px no-repeat,
+    linear-gradient(#f2dcca, #f2dcca) 34% 38px / 8px 33px no-repeat,
+    linear-gradient(#f2dcca, #f2dcca) 66% 38px / 8px 33px no-repeat,
+    linear-gradient(#f2dcca, #f2dcca) 43% 66px / 10px 26px no-repeat,
+    linear-gradient(#f2dcca, #f2dcca) 57% 66px / 10px 26px no-repeat;
+  clip-path: none;
+  z-index: 4;
+}
+.outfit-card > span::after { display: none !important; }
+.outfit-card > span .outfit-art { display: none; }
+.outfit-ninja-mask > span,.outfit-ninja-suit > span { --draw-item:#29233d; }
+.outfit-robot-mask > span { --draw-item:#78909c; }
+.outfit-hero-mask > span,.outfit-hero-suit > span { --draw-item:#d32f2f; }
+.outfit-mystery-mask > span { --draw-item:#7e57c2; }
+.outfit-space-mask > span { --draw-item:#90a4ae; }
+.outfit-monster-mask > span { --draw-item:#43a047; }
+.outfit-red-sneakers > span { --draw-item:#e53935; }
+.outfit-star-boots > span { --draw-item:#fbc02d; }
+.outfit-blue-trainers > span { --draw-item:#1976d2; }
+.outfit-green-runners > span { --draw-item:#43a047; }
+.outfit-golden-shoes > span { --draw-item:#f9a825; }
+.outfit-sky-t-shirt > span { --draw-item:#42a5f5; }
+.outfit-forest-hoodie > span { --draw-item:#43a047; }
+.outfit-galaxy-jacket > span { --draw-item:#673ab7; }
+.outfit-knight-armor > span { --draw-item:#78909c; }
+.outfit-adventure-shorts > span { --draw-item:#ffb74d; }
+.outfit-knight-pants > span { --draw-item:#455a64; }
+.outfit-shadow-cape > span { --draw-item:#202030; }
+.outfit-royal-cape > span { --draw-item:#b71c1c; }
+
 /* Outfit-specific colors. */
 .outfit-sky-t-shirt > span { --preview-top:#42a5f5; }
 .outfit-forest-hoodie > span { --preview-top:#43a047; --preview-detail:#1b5e20; }
