@@ -19,17 +19,6 @@
     linear-gradient(var(--preview-shoe, #e53935), var(--preview-shoe, #e53935)) 61% 87px / 15px 6px no-repeat;
   filter: drop-shadow(0 2px 2px #0003);
 }
-.outfit-card > span.illustrated-preview {
-  background: transparent;
-  filter: none;
-}
-.outfit-card > span.illustrated-preview .cartoon-boy.small {
-  transform: scale(.2);
-  transform-origin: top left;
-  margin: 0;
-}
-.outfit-card > span.illustrated-preview::before,
-.outfit-card > span.illustrated-preview::after { display: none; }
 .outfit-card > span::before {
   content: "";
   position: absolute;
